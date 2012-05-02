@@ -1,0 +1,16 @@
+h1 Lists
+
+div
+  | Filter:
+  input(type="text",ng-model="listFilter")
+
+  | Sort:
+  select(ng-model="listOrder")
+    option(value="title") Title
+    option(value="_id") Post Date
+
+br
+
+ul
+  li(ng-repeat="list in lists | filter:listFilter | orderBy:listOrder")
+    a(href="#/list/{{list._id}}") {{list._id}}

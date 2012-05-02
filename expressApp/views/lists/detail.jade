@@ -1,0 +1,5 @@
+h1 List Detail: {{ curList.name }}
+
+ul
+  li(ng-repeat="usage in curList.usages")
+    a(href="/#/submission/{{usage.id}}") {{usage.title}}

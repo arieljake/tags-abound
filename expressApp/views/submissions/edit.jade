@@ -1,0 +1,23 @@
+h1 New Submission
+
+fieldset
+  legend Restaurant Details
+  ol
+    li
+      label(for="username") Username
+      input(id="username", name="username", type="text", placeholder="Username", required, autofocus, ng-model="submission.username")
+    li
+      label(for="title") Title
+      input(id="title", name="title", type="text", placeholder="Title", required, ng-model="submission.title")
+    li
+      label(for="location") Location
+      textarea(id="location", name="location", placeholder="Location", required, ng-model="submission.location")
+    li
+      label(for="description") Description
+      textarea(id="description", name="description", placeholder="Description", ng-model="submission.description")
+    li
+      label(for="tags") Tags
+      input(id="tags", name="tags", type="text", placeholder="Tags", tags-input, ng-model="submission.tags")
+
+    button(id="saveButton", ng-click="saveSubmission()") Save It!
+    button(id="cancelButton", ng-click="cancelEdit()") Cancel

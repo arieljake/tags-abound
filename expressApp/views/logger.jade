@@ -1,0 +1,20 @@
+html
+  head
+    script(src="/socket.io/socket.io.js")
+    script(src="http://code.jquery.com/jquery-1.7.1.min.js")
+    script(src="/javascripts/json2.js")
+    script
+      var socket = io.connect('http://localhost:3000');
+      socket.on('connect', function ()
+      {
+        socket.on('broadcast_msg', function (data)
+        {
+          console.log('Got msg:', data);
+          var msg = '<li>' + JSON.stringify(data) + '</li>';
+          $('#broadcast-msg').prepend(msg);
+        });
+      })
+  body
+    h1 Welcome to #{title}
+
+    ul#broadcast-msg

@@ -1,0 +1,18 @@
+script(src='/javascripts/loginModule.js')
+
+h1 Login
+
+div#Content
+  div(ng-controller="LoginCtrl")
+    span.error {{errorMessage}}
+    br
+    br
+
+    form(method="post",action="/login")
+      label(for="username") Username
+      input(type="text",id="username",name="username",placeholder="Username",required, ng-model="loginInfo.username")
+      br
+      label(for="password") Password
+      input(type="password",id="password",name="password",placeholder="Password",required, ng-model="loginInfo.password")
+      br
+      input(type="button",id="loginButton", value="Login", ng-click="login()")

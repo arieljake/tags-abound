@@ -11,12 +11,3 @@ exports.list = function(req, res){
 exports.detail = function(req, res){
 	res.render('lists/detail', {layout: false});
 };
-
-exports.indexDetail = function (idFxn) {
-	return function (req,res)
-	{
-		var listId = idFxn(req);
-
-		res.redirect('/views/lists/#/list/' + listId);
-	};
-};

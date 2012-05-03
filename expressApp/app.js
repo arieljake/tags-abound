@@ -10,6 +10,7 @@ var mongoskin = require("mongoskin");
 var underscore = require("underscore");
 var io = require('socket.io');
 var fs = require('fs');
+var rewriter = require('express-rewrite');
 
 var listly = require('listly');
 var submissions = require('./routes/submissions');
@@ -28,6 +29,7 @@ app.configure(function(){
   app.use(express.session({secret: "listlyisfun"}));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(rewriter);
   app.use(listly.authRequired(false));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
@@ -96,14 +98,14 @@ app.get('/views/logger', function(req,res) { res.render('logger',{layout: false,
 
 /** Submission Views **/
 app.get('/views/submissions', submissions.index);
-app.get('/views/submissions/index/:submissionId', submissions.indexDetail(function(req) {return req.params["submissionId"];}));
+app.get('/views/submissions/index/:submissionId', rewriter.rewrite('/views/submissions/#/submission/$1'));
 app.get('/views/submissions/list', submissions.list);
 app.get('/views/submissions/detail', submissions.detail);
 app.get('/views/submissions/edit', submissions.edit);
 
 /** Lists Views **/
 app.get('/views/lists', lists.index);
-app.get('/views/lists/index/:listId', lists.indexDetail(function(req) {return req.params["listId"];}));
+app.get('/views/lists/index/:listId', rewriter.rewrite('/views/lists/#/list/$1'));
 app.get('/views/lists/list', lists.list);
 app.get('/views/lists/detail', lists.detail);
 

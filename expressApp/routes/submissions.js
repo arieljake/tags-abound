@@ -15,12 +15,3 @@ exports.detail = function(req, res){
 exports.edit = function(req, res){
 	res.render('submissions/edit', {layout: false});
 };
-
-exports.indexDetail = function (idFxn){
-	return function (req,res)
-	{
-		var submissionId = idFxn(req);
-
-		res.redirect('/views/submissions/#/submission/' + submissionId);
-	};
-};

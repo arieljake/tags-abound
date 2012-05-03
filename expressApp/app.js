@@ -62,18 +62,13 @@ socketServer.sockets.on('connection', function (socket)
 
 // scheduled processes
 
-/*setInterval(function ()
+setInterval(function ()
 			{
-				db.executeDbCommand(listly.mapReduce.submission_byTag,function (err,results)
+				listly.mapReduce.performMapReduce(db,function (results)
 				{
 					logMsg(results);
-
-					db.executeDbCommand(listly.mapReduce.byTag_minCount,function (err,results)
-					{
-						logMsg(results);
-					});
 				});
-			},10000);*/
+			},10000);
 
 //Logging
 

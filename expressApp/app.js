@@ -9,6 +9,7 @@ var mongo = require("mongodb");
 var mongoskin = require("mongoskin");
 var underscore = require("underscore");
 var io = require('socket.io');
+var fs = require('fs');
 
 var listly = require('listly');
 var submissions = require('./routes/submissions');
@@ -27,7 +28,7 @@ app.configure(function(){
   app.use(express.session({secret: "listlyisfun"}));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(listly.authRequired(true));
+  app.use(listly.authRequired(false));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -61,7 +62,7 @@ socketServer.sockets.on('connection', function (socket)
 });
 
 // scheduled processes
-
+/**
 setInterval(function ()
 			{
 				listly.mapReduce.performMapReduce(db,function (results)
@@ -69,6 +70,8 @@ setInterval(function ()
 					logMsg(results);
 				});
 			},10000);
+
+**/
 
 //Logging
 
@@ -82,30 +85,36 @@ var logMsg = function (msg)
 
 // Routes
 
+/** Login **/
 app.get('/', submissions.index);
-app.get('/login', login.get);
+app.get('/login', login.index);
 app.post('/login', login.post);
 app.get('/logout', login.logout);
-app.get('/view/logger', function(req,res) { res.render('logger',{layout: false, title: "Logger"});});
 
-/** Submissions **/
-app.get('/view/submissions', submissions.index);
-app.get('/view/submissions/list', submissions.list);
-app.get('/view/submissions/detail', submissions.detail);
-app.get('/view/submissions/edit', submissions.edit);
+/** Utils **/
+app.get('/views/logger', function(req,res) { res.render('logger',{layout: false, title: "Logger"});});
 
-app.get('/submissions', submissions.getAllSubmissions(db));
-app.get('/submission/:submissionId', submissions.getSubmissionById(db,function(req) {return new mongo.ObjectID(req.params["submissionId"]);}));
-app.get('/submission/title/:submissionTitle', submissions.getSubmissionsByTitle(db,function(req) {return req.params["submissionTitle"];}));
+/** Submission Views **/
+app.get('/views/submissions', submissions.index);
+app.get('/views/submissions/index/:submissionId', submissions.indexDetail(function(req) {return req.params["submissionId"];}));
+app.get('/views/submissions/list', submissions.list);
+app.get('/views/submissions/detail', submissions.detail);
+app.get('/views/submissions/edit', submissions.edit);
 
-app.post('/save/submission', submissions.saveSubmission(db,
+/** Lists Views **/
+app.get('/views/lists', lists.index);
+app.get('/views/lists/index/:listId', lists.indexDetail(function(req) {return req.params["listId"];}));
+app.get('/views/lists/list', lists.list);
+app.get('/views/lists/detail', lists.detail);
+
+/** REST **/
+app.get('/submissions', listly.submissionREST.getAllSubmissions(db));
+app.get('/submission/:submissionId', listly.submissionREST.getSubmissionById(db,function(req) {return new mongo.ObjectID(req.params["submissionId"]);}));
+app.get('/submission/:submissionId/lists', listly.submissionREST.getSubmissionListsById(db,function(req) {return new mongo.ObjectID(req.params["submissionId"]);}));
+app.get('/submission/title/:submissionTitle', listly.submissionREST.getSubmissionsByTitle(db,function(req) {return req.params["submissionTitle"];}));
+app.get('/lists', listly.listREST.getAllLists(db));
+app.get('/list/:listId', listly.listREST.getListById(db,function(req) {return req.params["listId"];}));
+
+app.post('/submission', listly.submissionREST.saveSubmission(db,
 														function(req) { return req.body._id ? new mongo.ObjectID(req.body._id) : undefined;},
 														function(req) { return req.body;}));
-
-/** Lists **/
-app.get('/view/lists', lists.index);
-app.get('/view/lists/list', lists.list);
-app.get('/view/lists/detail', lists.detail);
-
-app.get('/lists', lists.getAllLists(db));
-app.get('/list/:listId', lists.getListById(db,function(req) {return req.params["listId"];}));

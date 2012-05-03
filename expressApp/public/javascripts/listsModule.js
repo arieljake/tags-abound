@@ -1,24 +1,21 @@
-var BASE_VIEW_URL = "/view/lists";
+var BASE_VIEW_URL = "/views/lists";
 
 var listTemplate = BASE_VIEW_URL + '/list';
 var detailTemplate = BASE_VIEW_URL + '/detail';
 
 angular.module('route', [], function ($routeProvider, $locationProvider, $provide)
 {
-	$routeProvider.when('/lists',
-						{template:listTemplate, controller:ListListCtrl});
-	$routeProvider.when('/list/:listId',
-						{template:detailTemplate, controller:ListDetailCtrl});
-
+	$routeProvider.when('/lists', {template:listTemplate, controller:ListListCtrl});
+	$routeProvider.when('/list/:listId', {template:detailTemplate, controller:ListDetailCtrl});
 	$routeProvider.otherwise({redirectTo:'/lists'});
 
-	$provide.factory('listService', function ($rootScope, $http, $location)
+	$provide.factory('listService', function ($http)
 	{
-		return new ListService($rootScope, $http);
+		return new ListService($http);
 	});
 });
 
-function ListListCtrl($rootScope, $scope, $route, $routeParams, listService)
+var ListListCtrl = function($rootScope, $scope, $route, $routeParams, listService)
 {
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
@@ -55,9 +52,9 @@ function ListListCtrl($rootScope, $scope, $route, $routeParams, listService)
 
 		return orderedList;
 	}
-}
+};
 
-function ListDetailCtrl($scope, $http, $route, $routeParams, listService)
+var ListDetailCtrl = function ($scope, $http, $route, $routeParams, listService)
 {
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
@@ -66,25 +63,4 @@ function ListDetailCtrl($scope, $http, $route, $routeParams, listService)
 	{
 		$scope.curList = list;
 	});
-}
-
-function ListService($rootScope, $http)
-{
-	this.get = function (listId, callback)
-	{
-		$http({method:'GET', url:'/list/' + listId})
-			.success(function (data, status, headers, config)
-					 {
-						 callback(data);
-					 });
-	};
-
-	this.getAll = function (callback)
-	{
-		$http({method:'GET', url:'/lists'}).
-			success(function (data, status, headers, config)
-					{
-						callback(data);
-					});
-	}
-}
+};

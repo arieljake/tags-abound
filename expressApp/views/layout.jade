@@ -1,20 +1,28 @@
 - var noMenu = noMenu ? noMenu : false;
+- var noNgApp = noNgApp ? noNgApp : false;
 
 !!!
-html(ng-app="route")
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/menu_style.css')
-    link(rel='stylesheet', href='/stylesheets/forms.css')
-    link(rel='stylesheet', href='/stylesheets/submissions.css')
-    script(src='/javascripts/angular.js')
-    script(src='/javascripts/filters.js')
-    script(src='/javascripts/jquery.js')
-    script(src='/javascripts/underscore.js')
-  body
+- if (noNgApp == true)
+  <html>
+- else
+  <html ng-app="route">
+
+head
+  title= title
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/menu_style.css')
+  link(rel='stylesheet', href='/stylesheets/forms.css')
+  link(rel='stylesheet', href='/stylesheets/submissions.css')
+  script(src='/javascripts/angular.js')
+  script(src='/javascripts/filters.js')
+  script(src='/javascripts/directives.js')
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/underscore.js')
+body
 
   - if (noMenu == false)
     include menus/topMenu
 
   != body
+
+</html>

@@ -19,3 +19,13 @@ div
 
 div
   | Tags: {{ curSubmission.tags }}
+
+br
+br
+
+h2 Appears In...
+
+ul
+  li(ng-repeat="list in curSubmissionLists")
+    a(href="/views/lists/index/{{list}}")
+      {{list}}

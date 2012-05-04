@@ -11,6 +11,7 @@ var underscore = require("underscore");
 var io = require('socket.io');
 var fs = require('fs');
 var rewriter = require('express-rewrite');
+var json = require('json');
 
 var listly = require('listly');
 var submissions = require('./routes/submissions');
@@ -26,11 +27,11 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.cookieParser());
-  app.use(express.session({secret: "listlyisfun"}));
+  app.use(express.session(listly.settings.getSessionSettings(express)));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(rewriter);
-  app.use(listly.authRequired(false));
+  app.use(listly.authRequired(true));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -95,6 +96,16 @@ app.get('/logout', login.logout);
 
 /** Utils **/
 app.get('/views/logger', function(req,res) { res.render('logger',{layout: false, title: "Logger"});});
+app.get('/fxn/mapReduce', function(req,res) {
+	var json = require('json');
+	res.writeHead(200);
+	listly.mapReduce.performMapReduce.call(null,db, function (results) {
+		res.write("" + json.stringify(results));
+	}, function ()
+	{
+		res.end();
+	});
+});
 
 /** Submission Views **/
 app.get('/views/submissions', submissions.index);

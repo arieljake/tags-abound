@@ -1,8 +1,13 @@
 div#menuOuter
-  ul#menu
-    li
-      a(href="/") submissions
-    li
-      a(href="/views/lists") lists
-    li
-      a(href="/logout") logout
+  div.username
+    - if (username !== null)
+      span= 'logged in as ' + username
+      a.logout(href='/logout') Logout
+    - else
+      a.logout(href='/login') Login
+  div
+    ul#menu
+      li
+        a(href="/") submissions
+      li
+        a(href="/views/lists") lists

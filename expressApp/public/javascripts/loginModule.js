@@ -1,8 +1,18 @@
+
+var BASE_VIEW_URL = "/views/login";
+
+var loginTemplate = BASE_VIEW_URL + '/login';
+var registerTemplate = BASE_VIEW_URL + '/register';
+
 angular.module('route', [], function ($routeProvider, $locationProvider, $provide)
 {
-	$provide.factory('loginService', function ($rootScope, $http)
+	$routeProvider.when('/login', {template: loginTemplate, controller: LoginCtrl});
+	$routeProvider.when('/register', {template: registerTemplate, controller: RegisterCtrl});
+	$routeProvider.otherwise({redirectTo:'/login'});
+
+	$provide.factory('loginService', function ($http)
 	{
-		return new LoginService($rootScope, $http);
+		return new LoginService($http);
 	});
 });
 
@@ -24,14 +34,26 @@ function LoginCtrl($scope, $http, $route, $window, loginService)
 	};
 }
 
-function LoginService($rootScope, $http)
+function RegisterCtrl($scope, $http, $route, $window, loginService)
 {
-	this.login = function (info, callback)
+	$scope.$route = $route;
+	$scope.registerInfo = {};
+	$scope.errorMessage = null;
+
+	$scope.register = function ()
 	{
-		$http({method:'POST', url:'/login', data: info})
-			.success(function (data, status, headers, config)
-					 {
-						 callback(status, data);
-					 });
+		if ($scope.registerInfo.password != $scope.registerInfo.password2)
+		{
+			$scope.errorMessage = "The passwords do not match, please try again.";
+			return;
+		}
+
+		loginService.register($scope.registerInfo, function (responseCode, errorMessage)
+		{
+			if (responseCode == 202)
+				$window.location.pathname = "/";
+			else
+				$scope.errorMessage = errorMessage;
+		});
 	};
 }

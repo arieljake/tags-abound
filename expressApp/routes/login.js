@@ -1,26 +1,22 @@
 
 
+exports.registerRedirect = function (req,res) {
+	res.redirect('/views/login#/register');
+};
+
+exports.logoutRedirect = function(req, res) {
+	req.session.username = undefined;
+	res.redirect('/');
+};
 
 exports.index = function(req,res) {
 	res.render('login/index', {title: "Login", noMenu: true});
 };
 
-
-exports.post = function(req, res){
-
-	if (req.body.username == "arieljake")
-	{
-		req.session.username = req.body.username;
-		res.redirect('/',202);
-	}
-	else
-	{
-		res.end('you must sign in as arieljake to enter');
-	}
-
+exports.login = function (req,res) {
+	res.render('login/login', {layout: false});
 };
 
-exports.logout = function(req, res) {
-	req.session.username = undefined;
-	res.redirect('/',200);
+exports.register = function (req,res) {
+	res.render('login/register', {layout: false});
 };

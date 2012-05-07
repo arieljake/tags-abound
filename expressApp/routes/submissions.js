@@ -6,13 +6,13 @@ exports.index = function(req, res){
 };
 
 exports.list = function(req, res){
-	res.render('submissions/list', {layout: false});
+	res.render('submissions/list', listly.renderUtils.params(req,{layout: false}));
 };
 
 exports.detail = function(req, res){
-	res.render('submissions/detail', {layout: false});
+	res.render('submissions/detail', listly.renderUtils.params(req,{layout: false}));
 };
 
 exports.edit = function(req, res){
-	res.render('submissions/edit', {layout: false});
+	res.render('submissions/edit', listly.renderUtils.params(req,{layout: false}));
 };

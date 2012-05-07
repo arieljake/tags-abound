@@ -22,6 +22,8 @@ function LoginCtrl($scope, $http, $route, $window, loginService)
 	$scope.loginInfo = {};
 	$scope.errorMessage = null;
 
+	$('div.pageTitle').innerText = "Login";
+
 	$scope.login = function ()
 	{
 		loginService.login($scope.loginInfo, function (responseCode, errorMessage)

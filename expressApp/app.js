@@ -14,10 +14,6 @@ var rewriter = require('express-rewrite');
 var json = require('json');
 var listly = require('listly');
 
-var submissions = require('./routes/submissions');
-var lists = require('./routes/lists');
-var login = require('./routes/login');
-
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
 
 /*************************
@@ -46,65 +42,18 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-app.dynamicHelpers({
-	session: function (req,res) {
-		return req.session;
-	}
-});
-
 app.listen(3000, function(){
 	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-});
-
-/****************************
- * Socket Server Configuration
- ****************************/
-
-//var socketServer = io.listen(app);
-//var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
-
-/****************************
- * Scheduled processes
- ****************************/
-
-/**
-setInterval(function ()
-			{
-				listly.mapReduce.performMapReduce(db,function (results)
-				{
-					logMsg(results);
-				});
-			},10000);
-
-**/
-
-
-/****************************
- * Utils
- ****************************/
-
-app.get('/ping', function (req,res) {
-	listlySocketServer.logMsg('ping successful');
-	res.send('ping successful');
-});
-app.get('/views/logger', function(req,res) { res.render('socket/logger',{layout: false, title: "Logger"});});
-app.get('/fxn/mapReduce', function(req,res) {
-	var json = require('json');
-	res.writeHead(200);
-	listly.mapReduce.performMapReduce.call(null,db, function (results)
-	{
-		var output = json.stringify(results);
-		res.write(output);
-		listlySocketServer.logMsg(output);
-	}, function ()
-	{
-		res.end();
-	});
 });
 
 /**********************
  * VIEWS
  **********************/
+
+var login = require('./routes/login');
+var submissions = require('./routes/submissions');
+var lists = require('./routes/lists');
+var profile = require('./routes/profile');
 
 /** Aliases **/
 app.get('/login', rewriter.rewrite('/views/login'));
@@ -131,6 +80,10 @@ app.get('/views/lists/index/:listId', rewriter.rewrite('/views/lists/#/list/$1')
 app.get('/views/lists/list', lists.list);
 app.get('/views/lists/detail', lists.detail);
 
+/** Profile **/
+app.get('/views/profile', profile.index);
+app.get('/views/profile/edit', profile.edit);
+
 /**********************
  * REST
  **********************/
@@ -138,17 +91,61 @@ app.get('/views/lists/detail', lists.detail);
 /** User **/
 app.post('/user/login', listly.userREST.doLogin(db));
 app.post('/user/register', listly.userREST.doRegister(db));
+app.get('/user', listly.userREST.getCurrentUser(db))
 
 /** Submissions **/
 app.get('/submissions', listly.submissionREST.getAllSubmissions(db));
-app.get('/submission/:submissionId', listly.submissionREST.getSubmissionById(db,function(req) {return new mongo.ObjectID(req.params["submissionId"]);}));
-app.get('/submission/:submissionId/lists', listly.submissionREST.getSubmissionListsById(db,function(req) {return new mongo.ObjectID(req.params["submissionId"]);}));
-app.get('/submission/title/:submissionTitle', listly.submissionREST.getSubmissionsByTitle(db,function(req) {return req.params["submissionTitle"];}));
-app.post('/submission', listly.submissionREST.saveSubmission(db,
-															 function(req) { return req.body._id ? new mongo.ObjectID(req.body._id) : undefined;},
-															 function(req) { return req.body;}));
+app.get('/submission/:submissionId', listly.submissionREST.getSubmissionById(db,"submissionId"));
+app.get('/submission/:submissionId/lists', listly.submissionREST.getSubmissionListsById(db,"submissionId"));
+app.get('/submission/title/:submissionTitle', listly.submissionREST.getSubmissionsByTitle(db,"submissionTitle"));
+app.post('/submission', listly.submissionREST.saveSubmission(db));
 
 /** Lists **/
 app.get('/lists', listly.listREST.getAllLists(db));
-app.get('/list/:listId', listly.listREST.getListById(db,function(req) {return req.params["listId"];}));
+app.get('/list/:listId', listly.listREST.getListById(db,"listId"));
 
+/****************************
+ * Socket Server Configuration
+ ****************************/
+
+//var socketServer = io.listen(app);
+//var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
+
+/****************************
+ * Scheduled processes
+ ****************************/
+
+/**
+ setInterval(function ()
+ {
+ listly.mapReduce.performMapReduce(db,function (results)
+ {
+ logMsg(results);
+ });
+ },10000);
+
+ **/
+
+
+/****************************
+ * Utils
+ ****************************/
+
+app.get('/ping', function (req,res) {
+	listlySocketServer.logMsg('ping successful');
+	res.send('ping successful');
+});
+app.get('/views/logger', function(req,res) { res.render('socket/logger',{layout: false, title: "Logger"});});
+app.get('/fxn/mapReduce', function(req,res) {
+	var json = require('json');
+	res.writeHead(200);
+	listly.mapReduce.performMapReduce.call(null,db, function (results)
+	{
+		var output = json.stringify(results);
+		res.write(output);
+		listlySocketServer.logMsg(output);
+	}, function ()
+	{
+		res.end();
+	});
+});

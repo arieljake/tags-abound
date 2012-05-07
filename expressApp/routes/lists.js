@@ -1,7 +1,8 @@
 
+var listly = require('listly');
 
 exports.index = function(req, res){
-	res.render('lists/index', {title: "Lists"});
+	res.render('lists/index', listly.renderUtils.params(req,{title: "Lists"}));
 };
 
 exports.list = function(req, res){

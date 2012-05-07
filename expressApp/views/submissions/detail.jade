@@ -1,31 +1,33 @@
-h1 Submission Detail
+div#Content
+  div.pageTitle Submission Detail
 
-a(href="#/edit/{{curSubmission._id}}") Edit
+  - if (username !== undefined)
+    a(href="#/edit/{{curSubmission._id}}") Edit
 
-br
-br
+  br
+  br
 
-div
-  | User: {{ curSubmission.username }}
+  div
+    | User: {{ curSubmission.username }}
 
-div
-  | Title: {{ curSubmission.title }}
+  div
+    | Title: {{ curSubmission.title }}
 
-div
-  | Location: {{ curSubmission.location }}
+  div
+    | Location: {{ curSubmission.location }}
 
-div
-  | Description: {{ curSubmission.description }}
+  div
+    | Description: {{ curSubmission.description }}
 
-div
-  | Tags: {{ curSubmission.tags }}
+  div
+    | Tags: {{ curSubmission.tags }}
 
-br
-br
+  br
+  br
 
-h2 Appears In...
+  h2 Appears In...
 
-ul
-  li(ng-repeat="list in curSubmissionLists")
-    a(href="/views/lists/index/{{list}}")
-      {{list}}
+  ul
+    li(ng-repeat="list in curSubmissionLists")
+      a(href="/views/lists/index/{{list}}")
+        {{list}}

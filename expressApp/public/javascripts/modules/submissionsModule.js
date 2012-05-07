@@ -17,8 +17,8 @@ var submissionModule = angular.module('route', [], function ($routeProvider, $lo
 		return new SubmissionService($http, $location);
 	});
 });
-submissionModule.filter('checkmark', filters.checkmarkFilterFactory);
-submissionModule.directive('tagsInput', directives.tagsInputFactory);
+submissionModule.directive('onEnter', directives.onEnter);
+submissionModule.directive('stopRKey', directives.stopRkey);
 
 function SubmissionListCtrl($rootScope, $scope, $http, $route, $routeParams, submissionService)
 {
@@ -51,20 +51,61 @@ function SubmissionDetailCtrl($scope, $route, $routeParams, submissionService)
 
 function SubmissionEditCtrl($scope, $route, $routeParams, $location, submissionService)
 {
+	var self = this;
+
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
+	$scope.tagList = [];
+
+	this.setSubmission = function (submission)
+	{
+		if (submission == null)
+		{
+			$scope.submission = {};
+			$scope.isNew = true;
+		}
+		else
+		{
+			$scope.submission = submission;
+			$scope.isNew = false;
+		}
+
+		$scope.tagList = self.getTagList();
+	};
+
+	this.getTagList = function ()
+	{
+		if ($scope.submission.tags === undefined || $scope.submission.tags === null)
+			return [];
+
+		return $scope.submission.tags.split(",");
+	};
 
 	if ($routeParams.submissionId != undefined)
 	{
 		submissionService.get($routeParams.submissionId, function (submission)
 		{
-			$scope.submission = submission;
+			self.setSubmission(submission);
 		});
 	}
 	else
 	{
-		$scope.submission = {};
+		self.setSubmission(null);
 	}
+
+	$scope.addTag = function (tag)
+	{
+		var curTags = $scope.submission.tags ? $scope.submission.tags.trim() : "";
+
+		if (curTags.length > 0)
+			curTags += "," + tag;
+		else
+			curTags = tag;
+
+		$scope.submission.tags = curTags;
+		$scope.tagList.push(tag);
+		$scope.$apply();
+	};
 
 	$scope.saveSubmission = function ()
 	{
@@ -75,5 +116,12 @@ function SubmissionEditCtrl($scope, $route, $routeParams, $location, submissionS
 	{
 		$location.path("/submissions");
 	};
-}
-;
+
+	$scope.getEditType = function()
+	{
+		if ($scope.isNew)
+			return "New";
+		else
+			return "Edit";
+	}
+};

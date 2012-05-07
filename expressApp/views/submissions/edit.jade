@@ -1,23 +1,32 @@
-h1 New Submission
-
-fieldset
-  legend Restaurant Details
-  ol
-    li
-      label(for="username") Username
-      input(id="username", name="username", type="text", placeholder="Username", required, autofocus, ng-model="submission.username")
-    li
-      label(for="title") Title
-      input(id="title", name="title", type="text", placeholder="Title", required, ng-model="submission.title")
-    li
-      label(for="location") Location
-      textarea(id="location", name="location", placeholder="Location", required, ng-model="submission.location")
-    li
-      label(for="description") Description
-      textarea(id="description", name="description", placeholder="Description", ng-model="submission.description")
-    li
-      label(for="tags") Tags
-      input(id="tags", name="tags", type="text", placeholder="Tags", tags-input, ng-model="submission.tags")
+div#Content
+  div.pageTitle {{getEditType()}} Submission
+  br
+  br
+  fieldset
+    label(for="username") Username
+    div.formValue= username
+    br
+    label(for="title") Title
+    input(id="title", name="title", type="text", placeholder="Title", ng-model="submission.title")
+    br
+    label(for="location") Location
+    textarea(id="location", name="location", placeholder="Location", ng-model="submission.location")
+    br
+    label(for="description") Description
+    textarea(id="description", name="description", placeholder="Description", ng-model="submission.description")
+    br
+    label(for="tags") Tags
+      span#usernameMsg.small Click enter to add
+    input(id="tags", name="tags", type="text", placeholder="Tags", tags-input, on-enter="addTag")
+    br
+    div.formSubValue
+      span Current tags:
+      ul.currentTagList
+        li(ng-repeat="tag in tagList")
+          span
+            a.deleteX(on-linkclick="deleteTag('{{tag}}')") x
+            {{ tag }}
 
     button(id="saveButton", ng-click="saveSubmission()") Save It!
     button(id="cancelButton", ng-click="cancelEdit()") Cancel
+    div.spacer

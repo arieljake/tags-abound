@@ -1,6 +1,6 @@
 div#menuOuter
   div.username
-    - if (username !== null)
+    - if (username !== undefined)
       span= 'logged in as ' + username
       a.logout(href='/logout') Logout
     - else
@@ -11,3 +11,6 @@ div#menuOuter
         a(href="/") submissions
       li
         a(href="/views/lists") lists
+      - if (username !== undefined)
+        li
+          a(href="/views/profile") profile

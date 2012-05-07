@@ -15,6 +15,16 @@ h1 {
     font-weight: 900;
 }
 
+.pageTitle {
+    color: #333;
+    font: 1.8em/1 Helvetica, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: solid 1px #333;
+}
+
 h2 {
     color: #333;
     font: 1.1em/1 "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
@@ -96,12 +106,21 @@ a:hover {
 }
 
 #Content {
+/*
     width: 500px;
-    margin: 0px auto; /* Right and left margin widths set to "auto" */
-    text-align: left; /* Counteract to IE5/Win Hack */
+    margin: 0px auto;
+    text-align: left;
     padding: 15px;
     border: 1px dashed #333;
     background-color: #eee;
+*/
+    margin:0 auto;
+    width:400px;
+    padding:14px;
+    border:solid 2px #b7ddf2;
+    background:#ebf4fb;
+    z-index: 1;
+    text-align: left;
 }
 
 .error {

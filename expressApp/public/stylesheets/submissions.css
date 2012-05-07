@@ -43,7 +43,6 @@
 /* sprites.less reset */
 [class^="icon-"], [class*=" icon-"] {
     display: inline;
-    width: auto;
     height: auto;
     line-height: inherit;
     vertical-align: baseline;
@@ -53,6 +52,7 @@
 }
 li[class^="icon-"], li[class*=" icon-"] {
     display: block;
+    clear: left;
 }
 /*  Font Awesome styles
     ------------------------------------------------------- */
@@ -78,7 +78,6 @@ a [class^="icon-"], a [class*=" icon-"] {
 }
 li [class^="icon-"], li [class*=" icon-"] {
     display: inline-block;
-    width: 1.25em;
     text-align: center;
 }
 li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {

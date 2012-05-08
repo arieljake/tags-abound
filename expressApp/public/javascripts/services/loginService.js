@@ -2,7 +2,7 @@ var LoginService = function ($http)
 {
 	this.login = function (info, callback)
 	{
-		$http({method:'POST', url:'/user/login', data: info})
+		$http({method:'POST', url:'/login', data: info})
 			.success(function (data, status, headers, config)
 					 {
 						 callback(status, data);
@@ -11,7 +11,7 @@ var LoginService = function ($http)
 
 	this.register = function (info, callback)
 	{
-		$http({method:'POST', url:'/user/register', data: info})
+		$http({method:'POST', url:'/register', data: info})
 			.success(function (data, status, headers, config)
 					 {
 						 callback(status, data);

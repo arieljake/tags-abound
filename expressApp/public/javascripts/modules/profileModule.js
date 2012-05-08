@@ -4,7 +4,7 @@ var editTemplate = BASE_VIEW_URL + '/edit';
 
 var profileModule = angular.module('route', [], function ($routeProvider, $locationProvider, $provide)
 {
-	$routeProvider.when('/', {template: editTemplate, controller: ProfileEditCtrl});
+	$routeProvider.when('/', {template:editTemplate, controller:ProfileEditCtrl});
 	$routeProvider.otherwise({redirectTo:'/'});
 
 	$provide.factory('profileService', function ($http)
@@ -22,6 +22,7 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
 	$scope.tagList = [];
+	$scope.errorMessage = null;
 
 
 	profileService.getCurrentUser(function (user)
@@ -45,12 +46,20 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 
 		if (tagIndex >= 0)
 		{
-			$scope.tagList.splice(tagIndex,1);
+			$scope.tagList.splice(tagIndex, 1);
 			$scope.user.tags = $scope.tagList.join(',');
 		}
 	};
 
-	this.refreshTagList = function()
+	$scope.saveUser = function ()
+	{
+		profileService.updateUser($scope.user, function ()
+		{
+			$scope.errorMessage = "Saved successfully";
+		});
+	};
+
+	this.refreshTagList = function ()
 	{
 		$scope.tagList = self.hasTags() ? $scope.user.tags.split(',') : [];
 	};
@@ -59,4 +68,5 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 	{
 		return $scope.user.tags !== undefined && $scope.user.tags !== null && $scope.user.tags.trim().length > 0;
 	};
-};
+}
+;

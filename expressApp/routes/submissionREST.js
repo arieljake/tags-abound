@@ -1,5 +1,4 @@
 var dao = require('listly').submissionDAO;
-var mongo = require("mongodb");
 
 exports.init = function (serverParts)
 {
@@ -28,9 +27,7 @@ var getSubmissionById = function (db,idParamName)
 {
 	return function (req,res)
 	{
-		var submissionId = new mongo.ObjectID(req.params[idParamName]);
-
-		dao.findSubmissionById(db,submissionId,function(item)
+		dao.findSubmissionById(dbreq.params[idParamName],function(item)
 		{
 			res.send(item);
 		});
@@ -41,9 +38,7 @@ var getSubmissionListsById = function (db,idParamName)
 {
 	return function (req,res)
 	{
-		var submissionId = new mongo.ObjectID(req.params[idParamName]);
-
-		dao.findSubmissionListsById(db,submissionId,function (lists)
+		dao.findSubmissionListsById(db,req.params[idParamName],function (lists)
 		{
 			res.send(lists);
 		});
@@ -68,7 +63,7 @@ var saveSubmission = function (db)
 	return function (req,res)
 	{
 		var submission = req.body;
-		var id = submission._id ? new mongo.ObjectID(submission._id) : undefined;
+		var id = submission._id ? submission._id : undefined;
 
 		submission.username = req.session.username;
 

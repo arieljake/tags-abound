@@ -31,41 +31,23 @@ directives.tagsInputFactory = function ()
 	};
 };
 
+/** http://jsfiddle.net/alimills/7Trgz/ **/
 directives.onEnter = function ()
 {
 	return function (scope, element, attrs)
 	{
-		$(element).bind('keypress', function (e)
+		$(element).bind('keydown keypress', function (e)
 		{
 			if (e.charCode == 13)
 			{
-				var value = $(element).val();
 				var fxnName = attrs["onEnter"];
+				var value = $(element).val();
+				$(element).val('');
 
 				scope[fxnName](value);
 				scope.$apply();
-				$(element).val('');
 
-				return false;
-			}
-		});
-	};
-};
-
-directives.onLinkClick = function ()
-{
-	return function (scope, element, attrs)
-	{
-		$(element).bind('keypress', function (e)
-		{
-			if (e.charCode == 13)
-			{
-				var value = $(element).val();
-				var fxnName = attrs["onEnter"];
-
-				scope[fxnName](value);
-				$(element).val('');
-
+				// cancel form submit
 				return false;
 			}
 		});

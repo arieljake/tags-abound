@@ -18,14 +18,12 @@ div#Content
       ul.currentTagList
         li(ng-repeat="tag in tagList")
           span
-            a.deleteX(on-linkclick="deleteTag('{{tag}}')") x
+            a.deleteX(href="", ng-click="removeTag()") x
             {{ tag }}
     label(for="location") Location
     input(id="location", name="location", type="text", placeholder="Location", ng-model="user.location")
     br
     div.buttonGroup
-      input.button(type="button", id="cancelButton", ng-click="cancelEdit()", value="Cancel")
       input.button(type="button", id="saveButton", ng-click="saveUser()", value="Save")
       div.spacer
-
-  div.spacer
+    div.spacer

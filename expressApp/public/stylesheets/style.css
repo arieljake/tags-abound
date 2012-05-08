@@ -9,6 +9,65 @@ body {
     text-align: center; /* Hack for IE5/Win */
 }
 
+
+#Content{
+    border:solid 2px #b7ddf2;
+    background:#ebf4fb;
+    /*
+        width: 500px;
+        margin: 0px auto;
+        text-align: left;
+        padding: 15px;
+        border: 1px dashed #333;
+        background-color: #eee;
+    */
+    margin:0 auto;
+    width:450px;
+    padding:14px;
+    border:solid 2px #b7ddf2;
+    background:#ebf4fb;
+    z-index: 1;
+    text-align: left;
+}
+
+#Content p+p {
+    margin-top: -1em;
+    text-indent: 2.7em;
+}
+
+#Content p+ol, #Content p+ul {
+    margin-top: 0em;
+}
+
+#Content h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+#Content p{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:20px;
+    border-bottom:solid 1px #b7ddf2;
+    padding-bottom:10px;
+}
+#Content label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    float:left;
+}
+#Content .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+}
+
+
 h1 {
     color: #333;
     font: 1.8em/1 "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
@@ -44,19 +103,10 @@ p {
     margin: 0 0 1em;
 }
 
-#Content p+p {
-    margin-top: -1em;
-    text-indent: 2.7em;
-}
-
 ol, ul {
     margin-top: 0;
     margin-bottom: 1em;
     line-height: 1.8;
-}
-
-#Content p+ol, #Content p+ul {
-    margin-top: 0em;
 }
 
 a {
@@ -103,24 +153,6 @@ a:hover {
     border: 1px dashed #999;
     text-indent: 0 !important;
     padding: .3em;
-}
-
-#Content {
-/*
-    width: 500px;
-    margin: 0px auto;
-    text-align: left;
-    padding: 15px;
-    border: 1px dashed #333;
-    background-color: #eee;
-*/
-    margin:0 auto;
-    width:400px;
-    padding:14px;
-    border:solid 2px #b7ddf2;
-    background:#ebf4fb;
-    z-index: 1;
-    text-align: left;
 }
 
 .error {

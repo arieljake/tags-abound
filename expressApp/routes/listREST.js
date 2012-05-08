@@ -1,6 +1,15 @@
 var dao = require('listly').listDAO;
 
-exports.getAllLists = function (db)
+exports.init = function (serverParts)
+{
+	var app = serverParts.app;
+	var db = serverParts.db;
+
+	app.get('/lists', getAllLists(db));
+	app.get('/list/:listId', getListById(db,"listId"));
+};
+
+var getAllLists = function (db)
 {
 	return function (req,res)
 	{
@@ -11,7 +20,7 @@ exports.getAllLists = function (db)
 	};
 };
 
-exports.getListById = function (db,idParamName)
+var getListById = function (db,idParamName)
 {
 	return function (req,res)
 	{

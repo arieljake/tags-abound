@@ -26,7 +26,9 @@ div#Content
           span
             a.deleteX(on-linkclick="deleteTag('{{tag}}')") x
             {{ tag }}
-
-    button(id="saveButton", ng-click="saveSubmission()") Save It!
-    button(id="cancelButton", ng-click="cancelEdit()") Cancel
+    br
+    div.buttonGroup
+      input.button(id="cancelButton", type="button", ng-click="cancelEdit()", value="Cancel")
+      input.button(id="saveButton", type="button", ng-click="saveSubmission()", value="Save")
+      div.spacer
     div.spacer

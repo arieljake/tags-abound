@@ -1,7 +1,19 @@
 var dao = require('listly').submissionDAO;
 var mongo = require("mongodb");
 
-exports.getAllSubmissions = function (db)
+exports.init = function (serverParts)
+{
+	var app = serverParts.app;
+	var db = serverParts.db;
+
+	app.get('/submissions', getAllSubmissions(db));
+	app.get('/submission/:submissionId', getSubmissionById(db,"submissionId"));
+	app.get('/submission/:submissionId/lists', getSubmissionListsById(db,"submissionId"));
+	app.get('/submission/title/:submissionTitle', getSubmissionsByTitle(db,"submissionTitle"));
+	app.post('/submission', saveSubmission(db));
+};
+
+var getAllSubmissions = function (db)
 {
 	return function (req,res)
 	{
@@ -12,7 +24,7 @@ exports.getAllSubmissions = function (db)
 	};
 };
 
-exports.getSubmissionById = function (db,idParamName)
+var getSubmissionById = function (db,idParamName)
 {
 	return function (req,res)
 	{
@@ -25,7 +37,7 @@ exports.getSubmissionById = function (db,idParamName)
 	};
 };
 
-exports.getSubmissionListsById = function (db,idParamName)
+var getSubmissionListsById = function (db,idParamName)
 {
 	return function (req,res)
 	{
@@ -38,7 +50,7 @@ exports.getSubmissionListsById = function (db,idParamName)
 	};
 };
 
-exports.getSubmissionsByTitle = function (db,titleParamName)
+var getSubmissionsByTitle = function (db,titleParamName)
 {
 	return function (req,res)
 	{
@@ -51,7 +63,7 @@ exports.getSubmissionsByTitle = function (db,titleParamName)
 	};
 };
 
-exports.saveSubmission = function (db)
+var saveSubmission = function (db)
 {
 	return function (req,res)
 	{

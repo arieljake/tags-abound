@@ -1,8 +1,31 @@
 
 
 
-div
-  label(for="username") Username
-  span {{user.username}}
+div#Content
+  div.pageTitle Profile
+  br
+  br
+  fieldset
+    label Username
+    div.formValue= username
+    br
+    label(for="tags") Tags
+      span#usernameMsg.small Click enter to add
+    input(id="tags", name="tags", type="text", placeholder="Tags", tags-input, on-enter="addTag")
+    br
+    div.formSubValue
+      span Current tags:
+      ul.currentTagList
+        li(ng-repeat="tag in tagList")
+          span
+            a.deleteX(on-linkclick="deleteTag('{{tag}}')") x
+            {{ tag }}
+    label(for="location") Location
+    input(id="location", name="location", type="text", placeholder="Location", ng-model="user.location")
+    br
+    div.buttonGroup
+      input.button(type="button", id="cancelButton", ng-click="cancelEdit()", value="Cancel")
+      input.button(type="button", id="saveButton", ng-click="saveUser()", value="Save")
+      div.spacer
 
-div.spacer
+  div.spacer

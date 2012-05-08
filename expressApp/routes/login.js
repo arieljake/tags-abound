@@ -1,22 +1,42 @@
 
+var listly = require('listly');
 
-exports.registerRedirect = function (req,res) {
+exports.init = function (serverParts)
+{
+	var app = serverParts.app;
+	var rewriter = serverParts.rewriter;
+
+	app.get('/login', rewriter.rewrite('/views/login'));
+	app.get('/register', registerRedirect);
+	app.get('/logout', logoutRedirect);
+	app.get('/views/login', index);
+	app.get('/views/register', registerRedirect);
+	app.get('/views/login/login', login);
+	app.get('/views/login/register', register);
+}
+
+var registerRedirect = function (req,res)
+{
 	res.redirect('/views/login#/register');
 };
 
-exports.logoutRedirect = function(req, res) {
+var logoutRedirect = function(req, res)
+{
 	req.session.username = undefined;
 	res.redirect('/');
 };
 
-exports.index = function(req,res) {
-	res.render('login/index', {title: "Login", noMenu: true});
+var index = function(req,res)
+{
+	res.render('login/index', listly.renderUtils.params(req,{title: "Login", noMenu: true}));
 };
 
-exports.login = function (req,res) {
-	res.render('login/login', {layout: false});
+var login = function (req,res)
+{
+	res.render('login/login', listly.renderUtils.params(req,{layout: false}));
 };
 
-exports.register = function (req,res) {
-	res.render('login/register', {layout: false});
+var register = function (req,res)
+{
+	res.render('login/register', listly.renderUtils.params(req,{layout: false}));
 };

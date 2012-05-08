@@ -51,10 +51,19 @@ p, h1, form, button{border:0; margin:0; padding:0;}
     width:200px;
     margin:1px 0 20px 10px;
 }
+#Content .buttonGroup {
+    width: 100%;
+    font-size:12px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 2px;
+    padding-bottom: 4px;
+    border: none;
+    margin: 1px 0 20px 10px;
+    text-align: right;
+}
 #Content .button {
-    float:right;
-    margin-left:150px;
-    width:125px;
+    width:100px;
     height:31px;
     background:#666666 no-repeat;
     text-align:center;
@@ -62,8 +71,10 @@ p, h1, form, button{border:0; margin:0; padding:0;}
     color:#FFFFFF;
     font-size:11px;
     font-weight:bold;
-    margin-right: 45px;
     padding-top: 0;
+}
+#Content .buttonGroup input {
+    float: right;
 }
 #Content .formValue {
     float:left;

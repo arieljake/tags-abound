@@ -16,5 +16,7 @@ div#Content
       span#password2Msg.small Lasts forever
     input(type="checkbox",id="rememberme",name="rememberme",value="yes",ng-model="loginInfo.rememberme")
     br
-    input.button(type="button",id="loginButton", value="Login", ng-click="login()")
+    div.buttonGroup
+      input.button(type="button",id="loginButton", value="Login", ng-click="login()")
+      div.spacer
     div.spacer

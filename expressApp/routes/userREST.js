@@ -2,28 +2,18 @@
 var dao = require('listly').userDAO;
 var mongo = require("mongodb");
 
-exports.getCurrentUser = function (db) {
+exports.init = function (serverParts)
+{
+	var app = serverParts.app;
+	var db = serverParts.db;
 
-	return function (req,res)
-	{
-		if (req.session === undefined || req.session.username === undefined)
-		{
-			res.writeHead(404);
-		}
-		else
-		{
-			var userId = new mongo.ObjectID(req.session.userId);
-
-			dao.findUserById(db, userId, function(user)
-			{
-				res.send(user);
-			});
-		}
-	};
+	app.post('/user/login', doLogin(db));
+	app.post('/user/register', doRegister(db));
+	app.get('/user', getCurrentUser(db));
 };
 
-exports.doLogin = function (db) {
-
+var doLogin = function (db)
+{
 	return function(req, res)
 	{
 		var login = {
@@ -50,8 +40,8 @@ exports.doLogin = function (db) {
 	};
 };
 
-exports.doRegister = function (db) {
-
+var doRegister = function (db)
+{
 	return function (req,res)
 	{
 		var user = {
@@ -73,5 +63,25 @@ exports.doRegister = function (db) {
 				res.end(registerMsg);
 			}
 		});
+	};
+};
+
+var getCurrentUser = function (db)
+{
+	return function (req,res)
+	{
+		if (req.session === undefined || req.session.username === undefined)
+		{
+			res.writeHead(404);
+		}
+		else
+		{
+			var userId = new mongo.ObjectID(req.session.userId);
+
+			dao.findUserById(db, userId, function(user)
+			{
+				res.send(user);
+			});
+		}
 	};
 };

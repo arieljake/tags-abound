@@ -8,6 +8,7 @@ var mongo = require("mongodb");
 var mongoskin = require("mongoskin");
 var io = require('socket.io');
 var fs = require('fs');
+// var everyauth = require('everyauth');
 
 var underscore = require("underscore");
 var rewriter = require('express-rewrite');
@@ -25,6 +26,8 @@ var socketServer = io.listen(app);
 
 var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
 var listlyEmailService = listly.emailService.createEmailService();
+
+// listly.everyauth.configure(everyauth);
 
 var serverParts = {
 	app: app,
@@ -46,7 +49,8 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(rewriter);
-  app.use(listly.authRequired(false));
+  app.use(listly.authRequired(true));
+  // app.use(everyauth.middleware());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -60,6 +64,7 @@ app.configure('production', function(){
 });
 
 listly.server.init(serverParts);
+// everyauth.helpExpress(app);
 
 app.listen(3000, function(){
 	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

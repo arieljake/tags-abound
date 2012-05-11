@@ -26,7 +26,7 @@ var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
 var socketServer = io.listen(app);
 
 var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
-var listlyEmailService = listly.emailService.createEmailService();
+var listlyEmailService = listly.emailService.createEmailService(__dirname);
 
 // listly.everyauth.configure(everyauth);
 
@@ -35,7 +35,8 @@ var serverParts = {
 	db: db,
 	rewriter: rewriter,
 	listlySocketServer: listlySocketServer,
-	listlyEmailService: listlyEmailService
+	listlyEmailService: listlyEmailService,
+	rootDir: __dirname
 };
 
 /*************************
@@ -46,11 +47,11 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.cookieParser());
-  app.use(express.session(listly.sessionSettings.createSessionSettings(express)));
+  app.use(express.session(listly.session.createSessionSettings(express)));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(rewriter);
-  app.use(listly.authRequired(true,false));
+  app.use(listly.authRequired(true,true));
   // app.use(everyauth.middleware());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));

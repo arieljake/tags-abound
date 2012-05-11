@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619decfb-ac1a-4994-8872-017514fd674d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/email.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/resources/registrationEmail.orig.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/resources/registrationEmail.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/sessionSettings.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/app.js" afterPath="$PROJECT_DIR$/expressApp/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/login.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpClient.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/public/stylesheets/forms.css" afterPath="$PROJECT_DIR$/expressApp/public/stylesheets/forms.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/login/login.jade" afterPath="$PROJECT_DIR$/expressApp/views/login/login.jade" />
     </list>
     <ignored path="tags-abound.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +50,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/expressApp/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="10" selection-start="38" selection-end="38" vertical-scroll-proportion="0.034762457">
+            <state line="34" column="11" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.59096175">
               <folding />
             </state>
           </provider>
@@ -61,22 +69,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/submissionDAO.js" />
-        <option value="$PROJECT_DIR$/expressApp/public/javascripts/services/submissionService.js" />
-        <option value="$PROJECT_DIR$/expressApp/public/javascripts/modules/submissionsModule.js" />
-        <option value="$PROJECT_DIR$/expressApp/views/profile/edit.jade" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userValidate.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/socketServer.js" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpServer.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpClient.js" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utils.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
         <option value="$PROJECT_DIR$/expressApp/views/layout.jade" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/everyauth.js" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpClient.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js" />
         <option value="$PROJECT_DIR$/expressApp/app.js" />
+        <option value="$PROJECT_DIR$/expressApp/views/login/login.jade" />
+        <option value="$PROJECT_DIR$/expressApp/public/stylesheets/forms.css" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/email.js" />
+        <option value="$PROJECT_DIR$/expressApp/resources/registrationEmail.txt" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/login.js" />
       </list>
     </option>
   </component>
@@ -100,7 +108,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -111,7 +119,88 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expressApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expressApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags-abound" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expressApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.31258106" />
@@ -123,6 +212,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/expressApp/resources" />
       <recent name="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -178,10 +268,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2492515" sideWeight="0.87586206" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24874552" sideWeight="0.8604651" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29605734" sideWeight="0.9966924" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24874552" sideWeight="0.13178295" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -189,7 +280,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -250,64 +340,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userValidate.js">
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="161" selection-end="161" vertical-scroll-proportion="0.19572954" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="47" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.29300117" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17437722" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/socketServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.12455516" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="2" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.1609589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/smtpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="703" selection-end="703" vertical-scroll-proportion="0.017123288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="90" selection-end="90" vertical-scroll-proportion="0.06849315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="69" selection-start="393" selection-end="393" vertical-scroll-proportion="0.23972602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/public/javascripts/services/loginService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="111" selection-end="118" vertical-scroll-proportion="0.06849315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/login/login.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="6" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -319,37 +354,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/layout.jade">
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/socketServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="121" selection-end="121" vertical-scroll-proportion="0.06849315">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="12" selection-start="428" selection-end="428" vertical-scroll-proportion="0.35958904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="36" selection-start="647" selection-end="647" vertical-scroll-proportion="0.49657536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.17123288">
+        <state line="13" column="27" selection-start="521" selection-end="533" vertical-scroll-proportion="0.22260274">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js">
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/amazonSES.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+        <state line="1" column="33" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/public/stylesheets/forms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="21" selection-start="629" selection-end="629" vertical-scroll-proportion="0.49657536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/views/login/login.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="420" selection-end="420" vertical-scroll-proportion="0.20547946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/resources/registrationEmail.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="43" selection-end="43" vertical-scroll-proportion="0.06849315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/resources/registrationEmail.orig.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/email.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="25" selection-start="553" selection-end="553" vertical-scroll-proportion="0.3938356">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="415" selection-end="454" vertical-scroll-proportion="0.25684932">
+        <state line="90" column="19" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.6746575">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="38" selection-end="38" vertical-scroll-proportion="0.034762457">
+        <state line="34" column="11" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.59096175">
           <folding />
         </state>
       </provider>

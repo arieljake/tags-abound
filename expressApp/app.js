@@ -22,6 +22,7 @@ var listly = require('listly');
 
 var app = express.createServer();
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
+// var db = mongoskin.db("mongodb://heroku_app4599724:30c110279pipobpp46gf04j06q@ds033317.mongolab.com:33317/heroku_app4599724?auto_reconnect");
 var socketServer = io.listen(app);
 
 var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
@@ -49,7 +50,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(rewriter);
-  app.use(listly.authRequired(true));
+  app.use(listly.authRequired(true,false));
   // app.use(everyauth.middleware());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));

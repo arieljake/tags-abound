@@ -7,6 +7,7 @@
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
         <codeStyleSettings language="JavaScript">
+          <option name="METHOD_BRACE_STYLE" value="2" />
           <indentOptions>
             <option name="USE_TAB_CHARACTER" value="true" />
           </indentOptions>

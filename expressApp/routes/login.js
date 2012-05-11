@@ -15,8 +15,8 @@ exports.init = function (serverParts)
 	app.get('/views/register', registerRedirect);
 	app.get('/views/login/login', login);
 	app.get('/views/login/register', register);
-	app.post('/login', doLogin(db));
-	app.post('/register', doRegister(db));
+	app.post('/doRegister', doRegister(db));
+	app.post('/doLogin', doLogin(db));
 }
 
 var registerRedirect = function (req,res)

@@ -9,6 +9,17 @@ div#Content
   fieldset
     label Username
     div.formValue= username
+      br
+    label(for="firstName") First Name
+    input(id="firstName", name="firstName", type="text", placeholder="First Name", ng-model="user.firstName")
+    br
+    label(for="lastName") Last Name
+    input(id="lastName", name="lastName", type="text", placeholder="Last Name", ng-model="user.lastName")
+    br
+    label(for="sex") Sex
+    select(id="sex", name="sex", ng-model="user.sex")
+      option(value="female") Female
+      option(value="male") Male
     br
     label(for="tags") Tags
       span#usernameMsg.small Click enter to add
@@ -23,6 +34,15 @@ div#Content
             {{ tag }}
     label(for="location") Location
     input(id="location", name="location", type="text", placeholder="Location", ng-model="user.location")
+    br
+    label(for="password") Password
+      span.small Min. size 4 chars
+    div.formValue
+      input(type="password",id="curpassword",name="curpassword",placeholder="Current Password",required, ng-model="user.curPassword")
+      br
+      input(type="password",id="password",name="password",placeholder="New Password",required, ng-model="user.newPassword")
+      br
+      input(type="password",id="password2",name="password2",placeholder="Retype Password",required, ng-model="user.newPassword2")
     br
     div.buttonGroup
       input.button(type="button", id="saveButton", ng-click="saveUser()", value="Save")

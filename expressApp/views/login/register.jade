@@ -16,5 +16,7 @@ div#Content
       span.small Yes, type it again
     input(type="password",id="password2",name="password2",placeholder="Retype Password",required, ng-model="registerInfo.password2")
     br
-    input.button(type="button",id="registerButton", value="Register", ng-click="register()")
+    div.buttonGroup
+      input.button(type="button",id="registerButton", value="Register", ng-click="register()")
+      div.spacer
     div.spacer

@@ -27,6 +27,11 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 
 	profileService.getCurrentUser(function (user)
 								  {
+									  if (user.sex === undefined)
+									  {
+										  user.sex = "female";
+									  }
+
 									  $scope.user = user;
 
 									  self.refreshTagList();
@@ -53,9 +58,9 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 
 	$scope.saveUser = function ()
 	{
-		profileService.updateUser($scope.user, function ()
+		profileService.updateUser($scope.user, function (results)
 		{
-			$scope.errorMessage = "Saved successfully";
+			$scope.errorMessage = results.message;
 		});
 	};
 

@@ -10,7 +10,7 @@ p, h1, form, button{border:0; margin:0; padding:0;}
 
 /* ----------- stylized ----------- */
 
-#Content input, #Content textarea{
+#Content input, #Content textarea, #Content select {
     float:left;
     font-size:12px;
     padding-top: 0;
@@ -50,6 +50,9 @@ p, h1, form, button{border:0; margin:0; padding:0;}
     border: none;
     width:200px;
     margin: 1px 0 20px 10px;
+}
+#Content .formValue input, #Content .formValue textarea, #Content .formValue select {
+    margin-left: 0;
 }
 #Content .formSubValue {
     clear: left;

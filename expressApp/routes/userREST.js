@@ -1,5 +1,6 @@
 
 var dao = require('listly').userDAO;
+var underscore = require('underscore');
 
 exports.init = function (serverParts)
 {
@@ -22,6 +23,9 @@ var getCurrentUser = function (db)
 		{
 			dao.findUserById(db, req.session.userId, function(user)
 			{
+				delete user.password;
+				delete user._id;
+
 				res.send(user);
 			});
 		}
@@ -32,14 +36,21 @@ var updateUser = function (db)
 {
 	return function (req,res)
 	{
-		var user = req.body;
+		var postValues = req.body;
 		var id = req.session.userId;
 
 		if (id !== undefined)
 		{
+			var user = underscore.clone(postValues);
+
 			dao.updateUser(db,id,user,function(user)
 			{
-				res.send(true);
+				var userPassword = underscore.clone(postValues);
+
+				dao.updateUserPassword(db,id,userPassword,function (user)
+				{
+					res.send(true);
+				})
 			});
 		}
 		else

@@ -2,16 +2,17 @@
 /*************************
  * Modules
  *************************/
-
 var express = require('express');
 var routes = require('./node_modules/listly/lib/routes');
 var mongo = require("mongodb");
 var mongoskin = require("mongoskin");
-var underscore = require("underscore");
 var io = require('socket.io');
 var fs = require('fs');
+
+var underscore = require("underscore");
 var rewriter = require('express-rewrite');
 var json = require('json');
+
 var listly = require('listly');
 
 /*************************
@@ -21,12 +22,16 @@ var listly = require('listly');
 var app = express.createServer();
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
 var socketServer = io.listen(app);
+
 var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
+var listlyEmailService = listly.emailService.createEmailService();
+
 var serverParts = {
 	app: app,
 	db: db,
+	rewriter: rewriter,
 	listlySocketServer: listlySocketServer,
-	rewriter: rewriter
+	listlyEmailService: listlyEmailService
 };
 
 /*************************

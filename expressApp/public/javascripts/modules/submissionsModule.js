@@ -38,7 +38,7 @@ function SubmissionDetailCtrl($scope, $route, $routeParams, submissionService)
 	$scope.$routeParams = $routeParams;
 	$scope.submissionId = $routeParams.submissionId;
 
-	submissionService.get($scope.submissionId, function (submission)
+	submissionService.getSubmission($scope.submissionId, function (submission)
 	{
 		$scope.curSubmission = submission;
 
@@ -83,7 +83,7 @@ function SubmissionEditCtrl($scope, $route, $routeParams, $location, submissionS
 
 	if ($routeParams.submissionId != undefined)
 	{
-		submissionService.get($routeParams.submissionId, function (submission)
+		submissionService.getSubmission($routeParams.submissionId, function (submission)
 		{
 			self.setSubmission(submission);
 		});

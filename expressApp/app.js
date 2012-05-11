@@ -4,7 +4,7 @@
  *************************/
 
 var express = require('express');
-var routes = require('./routes');
+var routes = require('./node_modules/listly/lib/routes');
 var mongo = require("mongodb");
 var mongoskin = require("mongoskin");
 var underscore = require("underscore");
@@ -22,7 +22,6 @@ var app = express.createServer();
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
 var socketServer = io.listen(app);
 var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
-var scheduledTasks = listly.scheduledTasks;
 var serverParts = {
 	app: app,
 	db: db,
@@ -55,25 +54,8 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-/**********************
- * ROUTING
- **********************/
-
-require('./routes/login').init(serverParts);
-require('./routes/submissions').init(serverParts);
-require('./routes/lists').init(serverParts);
-require('./routes/profile').init(serverParts);
-require('./routes/listREST').init(serverParts);
-require('./routes/submissionREST').init(serverParts);
-require('./routes/userREST').init(serverParts);
-require('./routes/utils').init(serverParts);
-
-/****************************
- * Start the app...
- ****************************/
+listly.server.init(serverParts);
 
 app.listen(3000, function(){
 	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
-
-// scheduledTasks.start(serverParts, 10000);

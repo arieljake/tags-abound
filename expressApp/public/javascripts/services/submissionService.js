@@ -9,7 +9,7 @@ var SubmissionService = function($http, $location)
 					});
 	};
 
-	this.get = function (submissionId, callback)
+	this.getSubmission = function (submissionId, callback)
 	{
 		$http({method:'GET', url:'/submission/' + submissionId})
 			.success(function (data, status, headers, config)

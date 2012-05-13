@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="/stylesheets/mocha.css" />
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/chai.js"></script>
+    <script src="/javascripts/mocha.js"></script>
+    <script src="/test/routes/submissionRESTTest.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script>
+        $(function(){
+            mocha
+                    .run();
+        })
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>

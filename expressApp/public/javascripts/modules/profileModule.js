@@ -71,5 +71,4 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 	{
 		return $scope.user.tags !== undefined && $scope.user.tags !== null && $scope.user.tags.trim().length > 0;
 	};
-}
-;
+};

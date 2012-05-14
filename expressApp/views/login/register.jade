@@ -8,6 +8,9 @@ div#Content
       span.small Must be unique
     input(type="text",id="username",name="username",placeholder="Username",required, ng-model="registerInfo.username")
     br
+    label(for="emailAddress") Email
+    input(type="text",id="emailAddress",name="emailAddress",placeholder="Email",required, ng-model="registerInfo.emailAddress")
+    br
     label(for="password") Password
       span.small Min. size 6 chars
     input(type="password",id="password",name="password",placeholder="Password",required, ng-model="registerInfo.password")

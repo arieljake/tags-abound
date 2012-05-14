@@ -1,4 +1,4 @@
-var BASE_VIEW_URL = "/views/profile";
+var BASE_VIEW_URL = "/views/user";
 
 var editTemplate = BASE_VIEW_URL + '/edit';
 
@@ -26,16 +26,15 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 
 
 	profileService.getCurrentUser(function (user)
-								  {
-									  if (user.sex === undefined)
-									  {
-										  user.sex = "female";
-									  }
+	{
+		if (user.sex === undefined) {
+			user.sex = "female";
+		}
 
-									  $scope.user = user;
+		$scope.user = user;
 
-									  self.refreshTagList();
-								  });
+		self.refreshTagList();
+	});
 
 	$scope.addTag = function (tag)
 	{
@@ -49,8 +48,7 @@ function ProfileEditCtrl($scope, $route, $routeParams, profileService)
 		var tag = this.tag;
 		var tagIndex = $scope.tagList.indexOf(tag);
 
-		if (tagIndex >= 0)
-		{
+		if (tagIndex >= 0) {
 			$scope.tagList.splice(tagIndex, 1);
 			$scope.user.tags = $scope.tagList.join(',');
 		}

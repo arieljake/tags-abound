@@ -6,30 +6,22 @@ var mongoskin = require("mongoskin");
 var io = require('socket.io');
 var rewriter = require('express-rewrite');
 var listly = require('listly');
-// var everyauth = require('everyauth');
 
 /*************************
  * Server Configuration
  *************************/
 var app = express.createServer();
-
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
-// var db = mongoskin.db("mongodb://heroku_app4599724:30c110279pipobpp46gf04j06q@ds033317.mongolab.com:33317/heroku_app4599724?auto_reconnect");
-
 var socketServer = io.listen(app);
 
-var listlySocketServer = listly.socketServer.manageSocketServer(socketServer);
-var listlyEmailService = listly.emailService.createEmailService(__dirname);
-
-// listly.everyauth.configure(everyauth);
+// var db = mongoskin.db("mongodb://heroku_app4599724:30c110279pipobpp46gf04j06q@ds033317.mongolab.com:33317/heroku_app4599724?auto_reconnect");
 
 var serverParts = {
+	rootDir:__dirname,
 	app: app,
-	db:db,
-	rewriter:rewriter,
-	listlySocketServer:listlySocketServer,
-	listlyEmailService:listlyEmailService,
-	rootDir:__dirname
+	db: db,
+	rewriter: rewriter,
+	socketServer: socketServer
 };
 
 /*************************
@@ -47,7 +39,6 @@ app.configure(function ()
 	app.use(express.methodOverride());
 	app.use(rewriter);
 	app.use(listly.authRequired(true, true));
-	// app.use(everyauth.middleware());
 	app.use(app.router);
 	app.use(express.static(__dirname + '/public'));
 });
@@ -62,8 +53,8 @@ app.configure('production', function ()
 	app.use(express.errorHandler());
 });
 
-listly.server.init(serverParts);
-// everyauth.helpExpress(app);
+var ListlyServer = listly.ListlyServer;
+var listlyServer = new ListlyServer(serverParts);
 
 app.listen(3000, function ()
 {

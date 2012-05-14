@@ -1,7 +1,7 @@
 div#menuOuter
   div.username
     - if (username !== undefined)
-      span= 'logged in as ' + username
+      a(href="/views/user/") #{username}
       a.logout(href='/logout') Logout
     - else
       a.logout(href='/login') Login

@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619decfb-ac1a-4994-8872-017514fd674d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/modules/homeModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/services/homeService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/views/user/home/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/views/user/home/main.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utilRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utilRoutes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/server.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileModule.js" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileModule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/menus/topMenu.jade" afterPath="$PROJECT_DIR$/expressApp/views/menus/topMenu.jade" />
     </list>
     <ignored path="tags-abound.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,28 +47,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="userRoutes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js">
+      <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="76" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+            <state line="9" column="42" selection-start="198" selection-end="198" vertical-scroll-proportion="-0.008303678">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expressApp/views/user/home/main.jade">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+            <state line="21" column="68" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topMenu.jade" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/expressApp/views/menus/topMenu.jade">
+      <file leaf-file-name="listREST.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="28" selection-start="130" selection-end="130" vertical-scroll-proportion="0.07476635">
+            <state line="7" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,22 +87,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utilRoutes.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/email.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/settings.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/server.js" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" />
-        <option value="$PROJECT_DIR$/expressApp/public/javascripts/services/HomeService.js" />
-        <option value="$PROJECT_DIR$/expressApp/public/javascripts/modules/homeModule.js" />
-        <option value="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileModule.js" />
-        <option value="$PROJECT_DIR$/expressApp/views/user/home/index.jade" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" />
         <option value="$PROJECT_DIR$/expressApp/views/user/home/main.jade" />
+        <option value="$PROJECT_DIR$/expressApp/views/menus/topMenu.jade" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/server.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listRoutes.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginRoutes.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utilRoutes.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" />
       </list>
     </option>
   </component>
@@ -342,93 +343,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/expressApp/public/javascripts/modules/homeModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="558" selection-end="558" vertical-scroll-proportion="0.39252338">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/user/home/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="37" selection-start="88" selection-end="88" vertical-scroll-proportion="0.018691588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/everyauth/node_modules/connect/lib/middleware/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="0.26168224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="239" selection-end="255" vertical-scroll-proportion="0.18691589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/submissions/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/submissions/edit.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="0" selection-end="66" vertical-scroll-proportion="0.056074765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/user/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.07476635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/public/javascripts/services/submissionService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/public/javascripts/modules/submissionsModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="56" selection-start="353" selection-end="353" vertical-scroll-proportion="0.093457945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="33" selection-start="701" selection-end="719" vertical-scroll-proportion="0.6168224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="26" selection-start="228" selection-end="228" vertical-scroll-proportion="0.1495327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="76" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -440,16 +357,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/views/user/home/main.jade">
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+        <state line="2" column="31" selection-start="28" selection-end="60" vertical-scroll-proportion="0.037383176">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/views/menus/topMenu.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="130" selection-end="130" vertical-scroll-proportion="0.07476635">
+        <state line="3" column="26" selection-start="89" selection-end="89" vertical-scroll-proportion="0.056074765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/views/user/home/main.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="55" selection-end="55" vertical-scroll-proportion="0.07476635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="118" selection-end="118" vertical-scroll-proportion="0.093457945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.11214953">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="179" selection-end="179" vertical-scroll-proportion="0.13084112">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="52" selection-start="162" selection-end="162" vertical-scroll-proportion="0.093457945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="-0.1588785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="39" selection-end="48" vertical-scroll-proportion="0.056074765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/utilRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="10" selection-start="669" selection-end="669" vertical-scroll-proportion="0.44859812">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="231" selection-end="231" vertical-scroll-proportion="0.1682243">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="68" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="42" selection-start="198" selection-end="198" vertical-scroll-proportion="-0.008303678">
           <folding />
         </state>
       </provider>

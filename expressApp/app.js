@@ -53,8 +53,8 @@ app.configure('production', function ()
 	app.use(express.errorHandler());
 });
 
-var ListlyServer = listly.ListlyServer;
-var listlyServer = new ListlyServer(serverParts);
+var ListlyAppServer = listly.ListlyAppServer;
+var listlyAppServer = new ListlyAppServer(serverParts);
 
 app.listen(3000, function ()
 {

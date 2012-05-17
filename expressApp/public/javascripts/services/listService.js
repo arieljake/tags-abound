@@ -2,7 +2,7 @@ var ListService = function ($http)
 {
 	this.get = function (listId, callback)
 	{
-		$http({method:'GET', url:'/list/' + listId})
+		$http.jsonp(baseDataUrl + '/list/' + listId + '?callback=JSON_CALLBACK')
 			.success(function (data, status, headers, config)
 					 {
 						 callback(data);
@@ -11,7 +11,7 @@ var ListService = function ($http)
 
 	this.getAll = function (callback)
 	{
-		$http({method:'GET', url:'/lists'}).
+		$http.jsonp(baseDataUrl + '/lists' + '?callback=JSON_CALLBACK').
 			success(function (data, status, headers, config)
 					{
 						callback(data);

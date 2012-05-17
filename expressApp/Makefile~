@@ -4,4 +4,4 @@ TESTS = $(shell find test -name "*.js" -type f | sort)
 test: test-bdd
 
 test-bdd: 
-	mocha --reporter $(REPORTER) --ui bdd -r should -r jsmockito -r listlyTest $(TESTS)
+	mocha --reporter $(REPORTER) --ui bdd -r should -r listlyTest $(TESTS)

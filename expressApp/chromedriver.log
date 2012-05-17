@@ -1,0 +1,65 @@
+[0.000][INFO]:      ChromeDriver 19.0.1068.0 /usr/local/bin/chromedriver
+[0.246][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.251][INFO]:      Using named testing interface
+[1.298][INFO]:      Connected to Chrome successfully. Version: 19.0.1084.46
+[1.319][FINE]:      Command received (/session/886e1e6d5e4f0c92c8fde56fc6001709)
+[1.320][FINE]:      Command finished (/session/886e1e6d5e4f0c92c8fde56fc6001709) with response {
+   "sessionId": "886e1e6d5e4f0c92c8fde56fc6001709",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "19.0.1068.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "19.0.1084.46",
+      "webStorageEnabled": false
+   }
+}
+
+[1.324][FINE]:      Command received (/session/886e1e6d5e4f0c92c8fde56fc6001709/url)
+[1.324][FINER]:     Waiting for all views to stop loading...
+[1.324][FINER]:     Done waiting for all views to stop loading
+[1.333][FINER]:     Waiting for all views to stop loading...
+[1.334][FINER]:     Done waiting for all views to stop loading
+[1.334][FINE]:      Command finished (/session/886e1e6d5e4f0c92c8fde56fc6001709/url) with response {
+   "sessionId": "886e1e6d5e4f0c92c8fde56fc6001709",
+   "status": 0,
+   "value": "chrome://newtab/"
+}
+
+[1.336][FINE]:      Command received (/session/886e1e6d5e4f0c92c8fde56fc6001709/title)
+[1.336][FINER]:     Waiting for all views to stop loading...
+[1.337][FINER]:     Done waiting for all views to stop loading
+[1.343][FINER]:     Waiting for all views to stop loading...
+[1.344][FINER]:     Done waiting for all views to stop loading
+[1.344][FINE]:      Command finished (/session/886e1e6d5e4f0c92c8fde56fc6001709/title) with response {
+   "sessionId": "886e1e6d5e4f0c92c8fde56fc6001709",
+   "status": 0,
+   "value": "New Tab"
+}
+

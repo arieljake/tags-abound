@@ -5,6 +5,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Node.js v0.6.15 Core Library" level="application" />
+    <orderEntry type="library" name="AngularJS" level="application" />
+    <orderEntry type="library" name="Mocha" level="application" />
+    <orderEntry type="library" name="Sinon" level="application" />
+    <orderEntry type="library" name="UnderscoreJS" level="application" />
+    <orderEntry type="library" name="Jasmine" level="application" />
   </component>
 </module>
 

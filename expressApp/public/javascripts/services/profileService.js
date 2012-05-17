@@ -2,9 +2,9 @@
 
 var ProfileService = function ($http)
 {
-	this.getCurrentUser = function(callback)
+	this.getUser = function(username,callback)
 	{
-		$http({method:'GET', url:'/user'})
+		$http.jsonp(baseDataUrl + '/users/' + username + '?callback=JSON_CALLBACK')
 			.success(function (data, status, headers, config)
 					 {
 						 callback(data);
@@ -13,7 +13,7 @@ var ProfileService = function ($http)
 
 	this.updateUser = function (user, callback)
 	{
-		$http({method:'POST', url:'/user', data: user}).
+		$http({method:'PUT', url:'/user', data: user}).
 			success(function (data, status, headers, config)
 					{
 						callback();

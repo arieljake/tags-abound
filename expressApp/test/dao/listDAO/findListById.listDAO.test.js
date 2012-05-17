@@ -1,5 +1,5 @@
 
-describe("findUserById", function ()
+describe("findListById", function ()
 {
 	var id;
 	var callback;
@@ -12,10 +12,10 @@ describe("findUserById", function ()
 
 	it("should specify corrects args to db", function()
 	{
-		userDAO.findUserById(id,callback);
+		listDAO.findListById(id,callback);
 
 		// can this be abstracted to a separate 'mongo' layer?
-		assert.equal(collectionSpy.firstCall.args[0],"v1_user");
+		assert.equal(collectionSpy.firstCall.args[0],"v1_list");
 		assert.equal(findSpy.firstCall.args[0]._id.toString(),new mongodb.ObjectID(id).toString());
 		assert.equal(findSpy.firstCall.args[1].limit,1);
 	});
@@ -31,7 +31,7 @@ describe("findUserById", function ()
 
 		try
 		{
-			userDAO.findUserById(id);
+			listDAO.findListById(id);
 		}
 		catch (e)
 		{
@@ -48,7 +48,7 @@ describe("findUserById", function ()
 			callback(null,[]);
 		});
 
-		userDAO.findUserById(id,function (result)
+		listDAO.findListById(id,function (result)
 		{
 			assert.equal(result,null);
 		});
@@ -61,7 +61,7 @@ describe("findUserById", function ()
 			callback(null,["item 1"]);
 		});
 
-		userDAO.findUserById(id,function (result)
+		listDAO.findListById(id,function (result)
 		{
 			assert.equal(result,"item 1");
 		});
@@ -74,7 +74,7 @@ describe("findUserById", function ()
 			callback(null,["item 1","item 2"]);
 		});
 
-		userDAO.findUserById(id,function (result)
+		listDAO.findListById(id,function (result)
 		{
 			assert.equal(result,"item 1");
 		});

@@ -46,7 +46,7 @@ describe("findUserByLogin", function ()
 		errorCaught.should.be.true;
 	});
 
-	it("should handle 'no users' by returning null", function ()
+	it("should handle no results by returning null", function ()
 	{
 		var toArraySpy = sinon.stub(db,"toArray", function (callback)
 		{

@@ -2,53 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619decfb-ac1a-4994-8872-017514fd674d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/dataApp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lang/lang.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataServer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileEditModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserById.userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserByLogin.userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserByUsername.userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/end.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/rest/userREST.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/routes/submissionREST.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter/listREST.dataRouter.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/tests/headless/login/loginTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/views/user/profile/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/views/user/profile/view.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/expressApp/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/expressApp/test/routes/submissionRESTTest.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userValidate.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/validation/userValidate.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/listREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/listREST.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/loginREST.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/submissionREST.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tags-abound.iml" afterPath="$PROJECT_DIR$/.idea/tags-abound.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/arieljake.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/arieljake.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/Makefile" afterPath="$PROJECT_DIR$/expressApp/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/authRequired.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/session.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/utils.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listlyTest/index.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listlyTest/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileModule.js" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/modules/profileModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/public/javascripts/services/listService.js" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/services/listService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/public/javascripts/services/profileService.js" afterPath="$PROJECT_DIR$/expressApp/public/javascripts/services/profileService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/layout.jade" afterPath="$PROJECT_DIR$/expressApp/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/menus/topMenu.jade" afterPath="$PROJECT_DIR$/expressApp/views/menus/topMenu.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js" afterPath="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js" afterPath="$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js" />
     </list>
     <ignored path="tags-abound.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserById.js" />
         <option value="$PROJECT_DIR$/expressApp/test/root.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/dao/findUserById.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/end.test.js" />
@@ -104,14 +61,15 @@
         <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserById.userDAO.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserByUsername.userDAO.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserByLogin.userDAO.test.js" />
-        <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js" />
-        <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter/listREST.dataRouter.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter.test.js" />
         <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js" />
         <option value="$PROJECT_DIR$/expressApp/Makefile" />
         <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js" />
+        <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js" />
+        <option value="$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js" />
       </list>
     </option>
   </component>
@@ -373,30 +331,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="33" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.75757575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/test/dao/userDAO/findUserById.userDAO.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="39" selection-start="99" selection-end="125" vertical-scroll-proportion="0.15076561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="44" selection-start="1137" selection-end="1147" vertical-scroll-proportion="0.81609195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="99" selection-start="539" selection-end="539" vertical-scroll-proportion="0.21902378">
           <folding />
         </state>
       </provider>
@@ -464,16 +401,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js">
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="488" selection-end="488" vertical-scroll-proportion="0.20498301">
+        <state line="31" column="91" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.570115">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataRouter.js">
+    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/userDAO/createUser.userDAO.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="91" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.570115">
+        <state line="16" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.28992072">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/userDAO/updateUserById.userDAO.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="76" selection-end="76" vertical-scroll-proportion="0.09060023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/userREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="487" selection-end="487" vertical-scroll-proportion="0.34428087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/userDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="51" selection-end="51" vertical-scroll-proportion="0.018120045">
           <folding />
         </state>
       </provider>

@@ -14,7 +14,6 @@ describe("createUser", function ()
 	{
 		userDAO.createUser(user,callback);
 
-		// can this be abstracted to a separate 'mongo' layer?
 		assert.equal(collectionSpy.firstCall.args[0],"v1_user");
 		assert.equal(insertSpy.firstCall.args[0].username,user.username);
 		assert.equal(insertSpy.firstCall.args[0].tags,user.tags);

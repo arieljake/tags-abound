@@ -14,7 +14,7 @@ describe("updateUserById", function ()
 
 	it("should specify corrects args to db", function()
 	{
-		userDAO.updateUserById(id,user,callback);
+		userDAO.updateUser(id,user,callback);
 
 		// can this be abstracted to a separate 'mongo' layer?
 		assert.equal(collectionSpy.firstCall.args[0],"v1_user");
@@ -32,7 +32,7 @@ describe("updateUserById", function ()
 			callback(error);
 		});
 
-		userDAO.updateUserById(id,user,function (err)
+		userDAO.updateUser(id,user,function (err)
 		{
 			assert.equal(err,error);
 		});
@@ -46,7 +46,7 @@ describe("updateUserById", function ()
 			callback(null);
 		});
 
-		userDAO.updateUserById(id,user,function (err)
+		userDAO.updateUser(id,user,function (err)
 		{
 			assert.equal(err,null);
 		});

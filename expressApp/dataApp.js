@@ -2,9 +2,9 @@
  * Modules
  *************************/
 var express = require('express');
-var mongoskin = require("mongoskin");
-var io = require('socket.io');
 var rewriter = require('express-rewrite');
+var io = require('socket.io');
+var mongoskin = require("mongoskin");
 var listly = require('listly');
 
 /*************************
@@ -13,6 +13,7 @@ var listly = require('listly');
 var app = express.createServer();
 var db = mongoskin.db("localhost:27017/listly?auto_reconnect");
 var socketServer = io.listen(app);
+var authProvider = new listly.ListlyAuthProvider();
 
 // var db = mongoskin.db("mongodb://heroku_app4599724:30c110279pipobpp46gf04j06q@ds033317.mongolab.com:33317/heroku_app4599724?auto_reconnect");
 
@@ -33,7 +34,10 @@ app.configure(function ()
 	app.use(express.cookieParser());
 	app.use(express.session(listly.session.createSessionSettings(express)));
 	app.use(express.bodyParser());
+	app.use(express.query());
 	app.use(express.methodOverride());
+	app.use(authProvider.oauth());
+	app.use(authProvider.login());
 	app.use(rewriter);
 	app.use(app.router);
 });
@@ -49,7 +53,7 @@ app.configure('production', function ()
 });
 
 var ListlyDataServer = listly.ListlyDataServer;
-var listlyServer = new ListlyDataServer(serverParts);
+var listlyDataServer = new ListlyDataServer(serverParts);
 
 app.listen(3001, function ()
 {

@@ -4,8 +4,8 @@ var mainTemplate = BASE_VIEW_URL + "/main";
 
 var homeModule = angular.module('route', [], function ($routeProvider, $locationProvider, $provide)
 {
-	$routeProvider.when('/', {template: mainTemplate, controller: MainHomeCtrl});
-	$routeProvider.otherwise({redirectTo:'/'});
+	$routeProvider.when('', {template: mainTemplate, controller: MainHomeCtrl});
+	$routeProvider.otherwise({redirectTo:''});
 
 	$provide.factory('homeService', function ($http)
 	{

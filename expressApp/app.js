@@ -38,7 +38,7 @@ app.configure(function ()
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(rewriter);
-	app.use(listly.authRequired(true, true));
+	app.use(listly.authRequired(true, true, new listly.LoginRemoteDAO(listly.settings.remoteDAOSettings)));
 	app.use(app.router);
 	app.use(express.static(__dirname + '/public'));
 });

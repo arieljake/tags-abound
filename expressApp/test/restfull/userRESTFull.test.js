@@ -8,16 +8,16 @@ var underscore = require('underscore');
 describe("UserDAO",function ()
 {
 	var server;
+	var db;
 	var userREST;
-	var userDAO;
 	var req;
 	var res;
 
 	beforeEach(function(done)
 	{
 		server = new listlyTest.ListlyDataServerStub();
+		db = server.db;
 		userREST = server.userREST;
-		userDAO = server.userDAO;
 		req = new listlyTest.ServerRequestStub();
 		res = new listlyTest.ServerResponseStub();
 

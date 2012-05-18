@@ -5,9 +5,9 @@ var detailTemplate = BASE_VIEW_URL + '/detail';
 
 angular.module('route', [], function ($routeProvider, $locationProvider, $provide)
 {
-	$routeProvider.when('/lists', {template:listTemplate, controller:ListListCtrl});
-	$routeProvider.when('/list/:listId', {template:detailTemplate, controller:ListDetailCtrl});
-	$routeProvider.otherwise({redirectTo:'/lists'});
+	$routeProvider.when('', {template:listTemplate, controller:ListListCtrl});
+	$routeProvider.when('/:listId', {template:detailTemplate, controller:ListDetailCtrl});
+	$routeProvider.otherwise({redirectTo:''});
 
 	$provide.factory('listService', function ($http)
 	{
@@ -59,8 +59,8 @@ var ListDetailCtrl = function ($scope, $http, $route, $routeParams, listService)
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
 
-	listService.get($routeParams.listId, function (list)
+	listService.getListById($routeParams.listId, function (list)
 	{
-		$scope.curList = list;
+		$scope.curList = list.value;
 	});
 };

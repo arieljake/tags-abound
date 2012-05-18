@@ -1,16 +1,13 @@
 div#menuOuter
   div.username
     - if (username !== undefined)
-      a(href="/views/user/") #{username}
+      a(href="/#{username}") #{username}
       a.logout(href='/logout') Logout
     - else
       a.logout(href='/login') Login
   div
     ul#menu
       li
-        a(href="/") submissions
+        a(href="/submissions") submissions
       li
-        a(href="/views/lists") lists
-      - if (username !== undefined)
-        li
-          a(href="/@#{username}") profile
+        a(href="/lists") lists

@@ -2,9 +2,11 @@
   <dictionary name="arieljake">
     <words>
       <w>chai</w>
+      <w>jsonp</w>
       <w>listly</w>
       <w>mongodb</w>
       <w>mongoskin</w>
+      <w>restfull</w>
       <w>rewriter</w>
       <w>sinon</w>
     </words>

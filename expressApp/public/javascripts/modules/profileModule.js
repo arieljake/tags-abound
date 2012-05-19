@@ -1,8 +1,5 @@
-function ProfileCtrl($scope, $route, $routeParams, $http)
+function ProfileCtrl($scope, $http)
 {
 	var self = this;
 	var profileService = new ProfileService($http);
-
-	$scope.$route = $route;
-	$scope.$routeParams = $routeParams;
 };

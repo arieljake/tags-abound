@@ -1,4 +1,4 @@
-var SubmissionService = function($http, $location)
+var SubmissionService = function($http)
 {
 	this.getAll = function (callback)
 	{
@@ -27,12 +27,12 @@ var SubmissionService = function($http, $location)
 					 });
 	};
 
-	this.save = function (submission)
+	this.save = function (submission, callback)
 	{
 		$http({method:'POST', url:'/submission', data:submission}).
 			success(function (data, status, headers, config)
 					{
-						$location.path("/submissions");
+						callback(status);
 					});
 	};
 };

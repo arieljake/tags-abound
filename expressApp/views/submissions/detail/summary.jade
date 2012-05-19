@@ -1,0 +1,17 @@
+div#Content
+  div.pageTitle #{submission.title} by #{submission.username}
+  br
+  br
+  div
+    | Location: #{submission.location}
+  div
+    | Description: #{submission.description}
+  div
+    | Tags: #{submission.tags}
+  br
+  h2 Appears In...
+  ul
+    each list in submission.lists
+      li
+        a(href="/lists/#{list}")
+          #{list}

@@ -33,6 +33,7 @@ app.configure(function ()
 	app.set('views', __dirname + '/views');
 	app.set('view engine', 'jade');
 
+	app.use(express.favicon('public/images/favicon.ico'));
 	app.use(express.cookieParser());
 	app.use(express.session(listly.session.createSessionSettings(express)));
 	app.use(express.bodyParser());

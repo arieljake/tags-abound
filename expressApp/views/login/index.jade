@@ -1,5 +1,9 @@
 
-script(src='/javascripts/services/loginService.js')
-script(src='/javascripts/modules/loginModule.js')
+script(src='/views/login/loginService.js')
+script(src='/views/login/loginCtrl.js')
 
-<div ng-view />
+div(ng-controller="LoginCtrl")
+  div#Content
+    include header
+    include loginForm
+    div.spacer

@@ -1,18 +1,12 @@
-div#Content
-  div.pageTitle Submissions
-  div
-    | Filter:
-    input(type="text",ng-model="submissionFilter")
 
-    | Sort:
-    select(ng-model="submissionOrder")
-      option(value="title") Title
-      option(value="_id") Post Date
+script(src='/views/submissions/submissionService.js')
+script(src='/views/submissions/home/submissionHomeCtrl.js')
 
-  br
+div(ng-controller="SubmissionHomeCtrl")
+  div#Content
+    include header
+    br
+    br
+    include latest
+    div.spacer
 
-  ul
-    each submission in submissions
-      li
-        a(href="/submissions/#{submission._id}")
-          #{submission.title}

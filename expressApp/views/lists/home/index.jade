@@ -1,14 +1,7 @@
 
-div#Content
-  h1 Lists
+script(src='/views/lists/listService.js')
+script(src='/views/lists/home/listHomeCtrl.js')
 
-  div
-    span Filter:
-    input(type="text",ng-model="listFilter")
+div(ng-controller="ListHomeCtrl")
+  include latest
 
-  br
-
-  ul
-    each list in lists
-      li
-        a(href="/lists/#{list._id}") #{list._id}

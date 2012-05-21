@@ -24,6 +24,8 @@ var serverParts = {
 	socketServer: socketServer
 };
 
+var listlyAppServer = new listly.ListlyAppServer(serverParts);
+
 /*************************
  * HTTP Configuration
  *************************/
@@ -39,7 +41,7 @@ app.configure(function ()
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(rewriter);
-	app.use(listly.authRequired(true, true, new listly.LoginRemoteDAO(listly.settings.remoteDAOSettings)));
+	app.use(listly.authRequired(true, true, listlyAppServer.getLoginHandler(), listlyAppServer.getRegisterHandler()));
 	app.use(app.router);
 	app.use(express.static(__dirname + '/public'));
 });
@@ -54,8 +56,7 @@ app.configure('production', function ()
 	app.use(express.errorHandler());
 });
 
-var ListlyAppServer = listly.ListlyAppServer;
-var listlyAppServer = new ListlyAppServer(serverParts);
+listlyAppServer.initRoutes();
 
 app.listen(3000, function ()
 {

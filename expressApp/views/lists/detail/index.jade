@@ -1,5 +1,7 @@
-script(src='/javascripts/services/listService.js')
 
-div#Content
+script(src='/views/lists/listService.js')
+script(src='/views/lists/detail/listDetailCtrl.js')
+
+div(ng-controller="ListDetailCtrl")
   include header
-  include submissions
+  include listSubmissions

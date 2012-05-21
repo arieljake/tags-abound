@@ -1,0 +1,24 @@
+span.error {{errorMessage}}
+br
+br
+form(method="post",action="/register",name="registrationForm")
+  label(for="username") Username
+    span.small Must be unique
+  input(type="text",id="username",name="username",placeholder="Username",required, ng-model="registerInfo.username")
+  br
+  label(for="emailAddress") Email
+  input(type="email",id="emailAddress",name="emailAddress",placeholder="Email",required, ng-model="registerInfo.emailAddress")
+  br
+  label(for="password") Password
+    span.small Min. size 6 chars
+  input(type="password",id="password",name="password",placeholder="Password",required, ng-model="registerInfo.password")
+  br
+  label(for="password2") Retype Password
+    span.small Yes, type it again
+  input(type="password",id="password2",name="password2",placeholder="Retype Password",required, ng-model="registerInfo.password2")
+  br
+  div.buttonGroup
+    input.button(type="button",id="registerButton", value="Register", ng-click="register()")
+    &nbsp;
+    a(href="/login") Login
+    div.spacer

@@ -1,0 +1,17 @@
+
+div
+  | Filter:
+  input(type="text",ng-model="submissionFilter")
+
+  | Sort:
+  select(ng-model="submissionOrder")
+    option(value="title") Title
+    option(value="_id") Post Date
+
+br
+
+ul
+  each submission in submissions
+    li
+      a(href="/submissions/#{submission._id}")
+        #{submission.title}

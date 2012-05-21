@@ -4,4 +4,9 @@ script(src='/javascripts/services/submissionService.js')
 script(src="/views/submissions/edit/submissionEditCtrl.js")
 
 div(ng-controller="SubmissionEditCtl")
-  include detail/summary
+  div#Content
+    include header
+    br
+    br
+    include submissionEditForm
+    div.spacer

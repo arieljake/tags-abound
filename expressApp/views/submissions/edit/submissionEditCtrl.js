@@ -1,10 +1,10 @@
 
-function SubmissionEditCtrl($scope, $http)
+function SubmissionEditCtrl($scope, $http, $location)
 {
 	var self = this;
+	var submissionService = new SubmissionService($http);
+	var submissionId = null;
 
-	$scope.$route = $route;
-	$scope.$routeParams = $routeParams;
 	$scope.tagList = [];
 
 	this.setSubmission = function (submission)
@@ -31,9 +31,9 @@ function SubmissionEditCtrl($scope, $http)
 		return $scope.submission.tags.split(",");
 	};
 
-	if ($routeParams.submissionId != undefined)
+	if (submissionId !== null)
 	{
-		submissionService.getSubmission($routeParams.submissionId, function (submission)
+		submissionService.getSubmission(submissionId, function (submission)
 		{
 			self.setSubmission(submission);
 		});

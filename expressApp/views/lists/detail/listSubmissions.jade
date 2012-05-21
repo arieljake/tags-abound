@@ -1,0 +1,7 @@
+
+div#Content
+  ul
+    each usage in list.usages
+      li
+        a(href="/submissions/#{usage.id}") #{usage.title}
+  div.spacer

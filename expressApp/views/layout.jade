@@ -1,11 +1,10 @@
-- var noMenu = noMenu ? noMenu : false;
-- var noNgApp = noNgApp ? noNgApp : false;
-
 !!!
-- if (noNgApp == true)
+- if (ngApp === undefined)
   <html>
+- else if (ngApp === null)
+  <html ng-app>
 - else
-  <html ng-app="route">
+  <html ng-app="#{ngApp}">
 
 head
   title= title

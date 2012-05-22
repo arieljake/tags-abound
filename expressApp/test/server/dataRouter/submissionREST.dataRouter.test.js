@@ -5,9 +5,10 @@ describe('submissionREST', function ()
 		var expectedRoutes = [
 			['get', '/submissions'],
 			['get', '/submissions/:submissionId'],
-			['get', '/submissions/:submissionId/lists'],
 			['get', '/submissions/search?title=:submissionTitle'],
-			['get', '/submissions']
+			['get', '/submissions'],
+			['post', '/submissions'],
+			['put', '/submissions/:submissionId']
 		];
 
 		testRoutesDefined(spies,expectedRoutes);

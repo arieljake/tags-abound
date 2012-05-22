@@ -56,12 +56,17 @@ describe("findSubmissionById", function ()
 	{
 		var toArraySpy = sinon.stub(db, "toArray", function (callback)
 		{
-			callback(null, ["item 1"]);
+			callback(null, [{_id: id, title: "item 1"}]);
+		});
+
+		var daoStub = sinon.stub(submissionDAO,"findSubmissionListsById", function (id, callback)
+		{
+			callback(null);
 		});
 
 		submissionDAO.findSubmissionById(id,function (result)
 		{
-			assert.equal(result, "item 1");
+			assert.equal(result.title, "item 1");
 		});
 	});
 
@@ -69,12 +74,17 @@ describe("findSubmissionById", function ()
 	{
 		var toArraySpy = sinon.stub(db, "toArray", function (callback)
 		{
-			callback(null, ["item 1", "item 2"]);
+			callback(null, [{_id: id, title: "item 1"},{_id: id, title: "item 2"}]);
+		});
+
+		var daoStub = sinon.stub(submissionDAO,"findSubmissionListsById", function (id, callback)
+		{
+			callback(null);
 		});
 
 		submissionDAO.findSubmissionById(id,function (result)
 		{
-			assert.equal(result, "item 1");
+			assert.equal(result.title, "item 1");
 		});
 	});
 });

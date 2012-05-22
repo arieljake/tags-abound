@@ -52,12 +52,18 @@ describe('submissionREST', function ()
 
 		it('should send results to res', function ()
 		{
-			var resSpy = sinon.spy(res,"send");
+			var resWriteHeadSpy = sinon.spy(res,"writeHead");
+			var resEndSpy = sinon.spy(res,"end");
 
 			restProvider.getAllSubmissions(req,res);
 
-			assert.ok(resSpy.calledOnce);
-			assert.equal(resSpy.firstCall.args[0],listly.renderUtils.outputJSONP(req,items));
+			assert.ok(resWriteHeadSpy.calledOnce);
+			assert.equal(resWriteHeadSpy.firstCall.args[0],200);
+			assert.ok(resWriteHeadSpy.firstCall.args[1].hasOwnProperty("Content-Type"));
+			assert.equal(resWriteHeadSpy.firstCall.args[1]["Content-Type"],"application/json");
+
+			assert.ok(resEndSpy.calledOnce);
+			assert.equal(resEndSpy.firstCall.args[0],listly.renderUtils.outputJSONP(req,items));
 		});
 	});
 })

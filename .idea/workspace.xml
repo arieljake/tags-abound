@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619decfb-ac1a-4994-8872-017514fd674d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/expressApp/views/home/toolbar.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/home/header.jade" afterPath="$PROJECT_DIR$/expressApp/views/home/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/home/index.jade" afterPath="$PROJECT_DIR$/expressApp/views/home/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/detail/header.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/detail/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/detail/index.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/detail/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/detail/submissionDetailCtrl.js" afterPath="$PROJECT_DIR$/expressApp/views/submissions/detail/submissionDetailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/detail/summary.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/detail/summary.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/edit/header.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/edit/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/edit/index.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/edit/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/edit/submissionEditCtrl.js" afterPath="$PROJECT_DIR$/expressApp/views/submissions/edit/submissionEditCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/home/latest.jade" afterPath="$PROJECT_DIR$/expressApp/views/submissions/home/latest.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/home/submissionHomeCtrl.js" afterPath="$PROJECT_DIR$/expressApp/views/submissions/home/submissionHomeCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/views/submissions/submissionService.js" afterPath="$PROJECT_DIR$/expressApp/views/submissions/submissionService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/dao/submissionDAO/findSubmissionById.submissionDAO.test.js" afterPath="$PROJECT_DIR$/expressApp/test/dao/submissionDAO/findSubmissionById.submissionDAO.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/routes/submissionREST.test.js" afterPath="$PROJECT_DIR$/expressApp/test/routes/submissionREST.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js" afterPath="$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js" />
     </list>
     <ignored path="tags-abound.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,11 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/expressApp/views/submissions/edit/header.jade" />
-        <option value="$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js" />
-        <option value="$PROJECT_DIR$/expressApp/views/submissions/detail/index.jade" />
-        <option value="$PROJECT_DIR$/expressApp/views/submissions/detail/submissionDetailCtrl.js" />
-        <option value="$PROJECT_DIR$/expressApp/views/submissions/detail/header.jade" />
         <option value="$PROJECT_DIR$/expressApp/views/submissions/detail/summary.jade" />
         <option value="$PROJECT_DIR$/expressApp/views/submissions/edit/index.jade" />
         <option value="$PROJECT_DIR$/expressApp/views/submissions/edit/submissionEditCtrl.js" />
@@ -90,6 +75,11 @@
         <option value="$PROJECT_DIR$/expressApp/views/submissions/home/submissionHomeCtrl.js" />
         <option value="$PROJECT_DIR$/expressApp/views/submissions/submissionService.js" />
         <option value="$PROJECT_DIR$/expressApp/views/submissions/home/latest.jade" />
+        <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js" />
+        <option value="$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js" />
+        <option value="$PROJECT_DIR$/expressApp/test/dao/submissionDAO/findSubmissionById.submissionDAO.test.js" />
+        <option value="$PROJECT_DIR$/expressApp/node_modules/listlyTest/index.js" />
+        <option value="$PROJECT_DIR$/expressApp/test/routes/submissionREST.test.js" />
       </list>
     </option>
   </component>
@@ -315,76 +305,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/expressApp/views/submissions/edit/submissionEditCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="46" selection-start="951" selection-end="951" vertical-scroll-proportion="0.4498309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/loginRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/userRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/appRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="118" selection-start="1941" selection-end="1955" vertical-scroll-proportion="0.6956522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/daoRemote/remoteDAO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="104" selection-end="104" vertical-scroll-proportion="0.046223223">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.43935928">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/submissionREST.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="51" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.49492672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/submissionDAO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46110484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/daoRemote/submissionRemoteDAO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="766" selection-end="774" vertical-scroll-proportion="0.55918825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/routes/submissionRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.79368657">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expressApp/views/submissions/detail/summary.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="6" selection-start="217" selection-end="276" vertical-scroll-proportion="0.30665162">
@@ -423,6 +343,76 @@
     <entry file="file://$PROJECT_DIR$/expressApp/views/submissions/home/latest.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="33" selection-start="179" selection-end="179" vertical-scroll-proportion="0.14430664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/server/dataRouter/submissionREST.dataRouter.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="352" selection-end="352" vertical-scroll-proportion="0.18038331">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/server/dataRouter/userREST.dataRouter.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="10" selection-start="184" selection-end="184" vertical-scroll-proportion="0.12626833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/server/dataRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="44" selection-start="1186" selection-end="1212" vertical-scroll-proportion="0.4576659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/submissionDAO/findSubmissionById.submissionDAO.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="11" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.945885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/dao/submissionDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="47" selection-start="1037" selection-end="1060" vertical-scroll-proportion="0.82525367">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listlyTest/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="270" selection-end="270" vertical-scroll-proportion="0.30665162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/view/renderUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="837" selection-end="930" vertical-scroll-proportion="0.72153324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/routes/submissionREST.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="11" selection-start="987" selection-end="987" vertical-scroll-proportion="0.61668545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/test/dao/submissionDAO/findAllSubmissions.submissionDAO.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expressApp/node_modules/listly/lib/rest/submissionREST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="384" selection-end="384" vertical-scroll-proportion="0.21645997">
           <folding />
         </state>
       </provider>

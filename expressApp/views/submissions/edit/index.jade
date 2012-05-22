@@ -1,9 +1,11 @@
 link(rel='stylesheet', href='/stylesheets/jquery.tagsinput.css')
 script(src='/javascripts/jquery.tagsinput.js')
-script(src='/javascripts/services/submissionService.js')
+script(src='/views/submissions/submissionService.js')
 script(src="/views/submissions/edit/submissionEditCtrl.js")
+script
+  var submissionId = "#{submissionId}";
 
-div(ng-controller="SubmissionEditCtl")
+div(ng-controller="SubmissionEditCtrl")
   div#Content
     include header
     br

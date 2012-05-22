@@ -1,38 +1,29 @@
-var SubmissionService = function($http)
+var SubmissionService = function ($http)
 {
-	this.getAll = function (callback)
+	this.getAllSubmission = function (callback)
 	{
-		$http({method:'GET', url:'/submissions'}).
-			success(function (data, status, headers, config)
-					{
-						callback(data);
-					});
+		$http.jsonp(baseDataUrl + '/submissions' + '?callback=JSON_CALLBACK')
+			.success(function (data, status, headers, config)
+			{
+				callback(data);
+			});
 	};
 
 	this.getSubmission = function (submissionId, callback)
 	{
-		$http({method:'GET', url:'/submission/' + submissionId})
+		$http.jsonp(baseDataUrl + '/submissions/' + submissionId + '?callback=JSON_CALLBACK')
 			.success(function (data, status, headers, config)
-					 {
-						 callback(data);
-					 });
+			{
+				callback(data);
+			});
 	};
 
-	this.getSubmissionLists = function (submissionId, callback)
+	this.saveSubmission = function (submission, callback)
 	{
-		$http({method:'GET', url:'/submission/' + submissionId + '/lists'})
-			.success(function (data, status, headers, config)
-					 {
-						 callback(data);
-					 });
-	};
-
-	this.save = function (submission, callback)
-	{
-		$http({method:'POST', url:'/submission', data:submission}).
+		$http({method:'POST', url:'/submissions', data:submission}).
 			success(function (data, status, headers, config)
-					{
-						callback(status);
-					});
+			{
+				callback(status);
+			});
 	};
 };

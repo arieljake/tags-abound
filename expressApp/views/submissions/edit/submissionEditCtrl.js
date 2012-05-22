@@ -1,77 +1,87 @@
 
-function SubmissionEditCtrl($scope, $http, $location)
+function SubmissionEditCtrl($scope, $http, $location, $window)
 {
-	var self = this;
-	var submissionService = new SubmissionService($http);
-	var submissionId = null;
+	this.init($scope,$http,$location,$window);
 
-	$scope.tagList = [];
-
-	this.setSubmission = function (submission)
+	if (submissionId != "")
 	{
-		if (submission == null)
-		{
-			$scope.submission = {};
-			$scope.isNew = true;
-		}
-		else
-		{
-			$scope.submission = submission;
-			$scope.isNew = false;
-		}
-
-		$scope.tagList = self.getTagList();
-	};
-
-	this.getTagList = function ()
-	{
-		if ($scope.submission.tags === undefined || $scope.submission.tags === null)
-			return [];
-
-		return $scope.submission.tags.split(",");
-	};
-
-	if (submissionId !== null)
-	{
-		submissionService.getSubmission(submissionId, function (submission)
-		{
-			self.setSubmission(submission);
-		});
+		this.loadSubmission(submissionId);
 	}
 	else
 	{
-		self.setSubmission(null);
+		this.setSubmission(null);
 	}
+}
 
-	$scope.addTag = function (tag)
+SubmissionEditCtrl.prototype.init = function (scope,http,location,window)
+{
+	var self = this;
+
+	this.scope = scope;
+	this.http = http;
+	this.location = location;
+	this.window = window;
+	this.submissionService = new SubmissionService(http);
+	this.scope.tagList = [];
+
+	this.scope.addTag = function (tag)
 	{
-		var curTags = $scope.submission.tags ? $scope.submission.tags.trim() : "";
+		var curTags = self.scope.submission.tags ? self.scope.submission.tags.trim() : "";
 
 		if (curTags.length > 0)
 			curTags += "," + tag;
 		else
 			curTags = tag;
 
-		$scope.submission.tags = curTags;
-		$scope.tagList.push(tag);
-		$scope.$apply();
+		self.scope.submission.tags = curTags;
+		self.scope.tagList.push(tag);
+		self.scope.$apply();
 	};
 
-	$scope.saveSubmission = function ()
+	this.scope.saveSubmission = function ()
 	{
-		submissionService.save($scope.submission);
+		self.submissionService.saveSubmission(self.scope.submission, function ()
+		{
+			self.window.location.pathname = "/";
+		});
 	};
 
-	$scope.cancelEdit = function ()
+	this.scope.cancelEdit = function ()
 	{
-		$location.path("/submissions");
+		self.window.location.pathname = "/submissions";
 	};
+};
 
-	$scope.getEditType = function()
+SubmissionEditCtrl.prototype.loadSubmission = function (submissionId)
+{
+	var self = this;
+
+	this.submissionService.getSubmission(submissionId, function (submission)
 	{
-		if ($scope.isNew)
-			return "New";
-		else
-			return "Edit";
+		self.setSubmission(submission);
+	});
+};
+
+SubmissionEditCtrl.prototype.setSubmission = function (submission)
+{
+	if (submission == null)
+	{
+		this.scope.submission = {};
+		this.scope.isNew = true;
 	}
+	else
+	{
+		this.scope.submission = submission;
+		this.scope.isNew = false;
+	}
+
+	this.scope.tagList = this.getTagList();
+};
+
+SubmissionEditCtrl.prototype.getTagList = function ()
+{
+	if (this.scope.submission.tags === undefined || this.scope.submission.tags === null)
+		return [];
+
+	return this.scope.submission.tags.split(",");
 };

@@ -1,6 +1,9 @@
+script(src="/views/submissions/submissionService.js")
 script(src="/views/submissions/detail/submissionDetailCtrl.js")
+script
+  var submissionId = "#{submissionId}"
 
-div(ng-controller="SubmissionDetailCtl")
+div(ng-controller="SubmissionDetailCtrl")
   div#Content
     include header
     br

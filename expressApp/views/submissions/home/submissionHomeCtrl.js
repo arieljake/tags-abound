@@ -1,12 +1,19 @@
 
-function SubmissionHomeCtrl($scope, $http)
+var SubmissionHomeCtrl = function ($scope, $http)
 {
-	var submissionService = new SubmissionService($http);
+	this.init($scope,$http);
 
-	$scope.submissions = [];
-
-	submissionService.getAll(function (submissions)
+	this.submissionService.getAllSubmission(function (submissions)
 	{
 		$scope.submissions = submissions;
 	});
 }
+
+SubmissionHomeCtrl.prototype.init = function (scope,http)
+{
+	this.scope = scope;
+	this.http = http;
+	this.submissionService = new SubmissionService(http);
+
+	this.scope.submissions = [];
+};

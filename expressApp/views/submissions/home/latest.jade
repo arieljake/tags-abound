@@ -11,7 +11,7 @@ div
 br
 
 ul
-  each submission in submissions
-    li
-      a(href="/submissions/#{submission._id}")
-        #{submission.title}
+ li(ng-repeat="submission in submissions|filter:submissionFilter|orderBy:submissionOrder")
+   span
+     a(href="/submissions/{{submission._id}}")
+      {{submission.title}}

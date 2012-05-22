@@ -1,13 +1,18 @@
 div
-  | Location: #{submission.location}
+  | Location:
+  span#location
+    {{curSubmission.location}}
 div
-  | Description: #{submission.description}
+  | Description:
+  span#description
+    {{curSubmission.description}}
 div
-  | Tags: #{submission.tags}
+  | Tags:
+  span#tags
+    {{curSubmission.tags}}
 br
 h2 Appears In...
 ul
-  each list in submission.lists
-    li
-      a(href="/lists/#{list}")
-        #{list}
+  li(ng-repeat="list in curSubmission.lists")
+    span
+      a(href="/lists/{{list}}") {{list}}
